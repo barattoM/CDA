@@ -38,9 +38,9 @@ DbConnect::init();
 $routes = [
     "default" => ["PHP/VIEW/", "ListeVille", "Liste des Villes"],
 
-    "listeVille" => ["PHP/VIEW/", "ListeVille", "Liste de produits"],
-    "formVille" => ["PHP/VIEW/", "FormVille", "Détail du Ville"],
-    "actionVille" => ["PHP/VIEW/", "ActionVille", "Mise à jour du Ville"]
+    "listeVille" => ["PHP/VIEW/", "ListeVille", "Liste des villes"],
+    "formVille" => ["PHP/VIEW/", "FormVille", "Détail de la Ville"],
+    "actionVille" => ["PHP/VIEW/", "ActionVille", "Mise à jour de la Ville"]
 ];
 
 if (isset($_GET["codePage"]))
