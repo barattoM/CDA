@@ -1,0 +1,75 @@
+DROP DATABASE IF EXISTS Poste;
+CREATE DATABASE IF NOT EXISTS `Poste` DEFAULT CHARACTER SET utf8 ;
+
+USE `Poste`;
+
+--
+-- Table structure for table `BureauxPoste`
+--
+
+CREATE TABLE BureauxPoste(
+   IdBureauxPoste INT AUTO_INCREMENT PRIMARY KEY,
+   codePostal VARCHAR(50)
+)ENGINE=InnoDB;
+
+--
+-- Table structure for table `CentresTri`
+--
+
+CREATE TABLE CentresTri(
+   IdCentreTri INT AUTO_INCREMENT PRIMARY KEY,
+   nomCentre VARCHAR(50)
+)ENGINE=InnoDB;
+
+--
+-- Table structure for table `Transports`
+--
+
+CREATE TABLE Transports(
+   IdTransport INT AUTO_INCREMENT PRIMARY KEY,
+   typeTransport VARCHAR(50) ,
+   taxeCarbone VARCHAR(50)
+)ENGINE=InnoDB;
+
+--
+-- Table structure for table `Types`
+--
+
+CREATE TABLE Types(
+   IdType INT AUTO_INCREMENT PRIMARY KEY,
+   nomType VARCHAR(50)
+)ENGINE=InnoDB;
+
+--
+-- Table structure for table `Courriers`
+--
+
+CREATE TABLE Courriers(
+   IdCourrier INT AUTO_INCREMENT PRIMARY KEY,
+   adresseDestinataire VARCHAR(50)  NOT NULL,
+   adresseEmetteur VARCHAR(50) ,
+   dateEnvoi VARCHAR(50) ,
+   dateReception VARCHAR(50) ,
+   IdType INT NOT NULL,
+   IdBureauxPoste INT NOT NULL
+)ENGINE=InnoDB;
+
+--
+-- Table structure for table `Distribue`
+--
+
+CREATE TABLE Distributions(
+   IdDistribution INT AUTO_INCREMENT PRIMARY KEY,
+   IdBureauxPoste INT,
+   IdCentreTri INT,
+   IdTransport INT  
+)ENGINE=InnoDB;
+
+ALTER TABLE Courriers 
+	ADD CONSTRAINT FOREIGN KEY(IdType) REFERENCES Types(IdType),
+    ADD CONSTRAINT FOREIGN KEY(IdBureauxPoste) REFERENCES BureauxPoste(IdBureauxPoste);
+    
+ALTER TABLE Distributions 
+	ADD CONSTRAINT FOREIGN KEY(IdBureauxPoste) REFERENCES BureauxPoste(IdBureauxPoste),
+	ADD CONSTRAINT FOREIGN KEY(IdCentreTri) REFERENCES CentresTri(IdCentreTri),
+    ADD CONSTRAINT FOREIGN KEY(IdTransport) REFERENCES Transports(IdTransport);
