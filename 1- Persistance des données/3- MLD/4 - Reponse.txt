@@ -1,0 +1,30 @@
+Chercheur : - anneeNaissance manquante dans le schema
+			- cardinalité avec Laboratoire 0,n -> 1,1 ou 0,1 pour avoir la clé etrangère du labo
+			- cardinalité avec Equipe 1,1 -> 1,n ou 0,n pour ne pas avoir la clé etrangère de l'équipe
+			- cardinalité avec Tutelle 1,1 -> 1,n ou 0,n pour ne pas avoir la clé étrangère de la tutelle
+
+Laboratoire : - directeur clé étrangère de tutelle ou Equipe ou chercheur
+
+Equipe : - OK
+
+Projet : - OK
+
+Tutelle : - OK
+
+Mission : - DateArrivée qui s'est transformé en dateRetour
+		  
+Pays : - OK
+
+EstMembre : - cardinalité avec Chercheur à mettre en 1,n ou 0,ne
+			- liaison ternaire avec Chercheur, Equipe et Laboratoire
+			
+EstRattaché : - DateEmbauche manquante
+			  - cardinalité 1,1 du chercheur -> 0,n ou 1,ne
+			  
+EstSousTutelle : - OK
+
+AconventionAvec : - depuis manquant
+
+TravailSur : - OK
+
+Effectue : - liaison ternaire avec projet
