@@ -8,4 +8,4 @@
 8 - NON
 9 - OUI
 10 - OUI
-11 - Le labo ne peut fournir qu'un médicament ou aucun
+11 - Le labo ne peut fournir qu'un médicament au maximum ou aucun
