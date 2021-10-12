@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Database>
+   <Name>9 - Gestion bibliotheque</Name>
+   <Table>
+      <Name>Auteurs</Name>
+      <Column>
+         <Name>IdAuteur</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>nomAuteur</Name>
+         <Type>VARCHAR(50) </Type>
+      </Column>
+      <PK>
+         <Key>IdAuteur</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>Editeurs</Name>
+      <Column>
+         <Name>IdEditeur</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>nomEditeur</Name>
+         <Type>VARCHAR(50) </Type>
+      </Column>
+      <PK>
+         <Key>IdEditeur</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>Genres</Name>
+      <Column>
+         <Name>IdGenre</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>nomGenre</Name>
+         <Type>VARCHAR(50) </Type>
+      </Column>
+      <PK>
+         <Key>IdGenre</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>Catalogues</Name>
+      <Column>
+         <Name>IdCatalogue</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>codeCatalogue</Name>
+         <Type>VARCHAR(50) </Type>
+      </Column>
+      <PK>
+         <Key>IdCatalogue</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>CategoriesProfessionnelle</Name>
+      <Column>
+         <Name>IdCategorieProfessionnelle</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>libelleCategProfessionnelle</Name>
+         <Type>VARCHAR(50) </Type>
+      </Column>
+      <PK>
+         <Key>IdCategorieProfessionnelle</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>Usures</Name>
+      <Column>
+         <Name>IdUsure</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>codeUsure</Name>
+         <Type>VARCHAR(50) </Type>
+      </Column>
+      <PK>
+         <Key>IdUsure</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>Abonnes</Name>
+      <Column>
+         <Name>IdAbonn&#233;</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>nomAbonne</Name>
+         <Type>VARCHAR(50) </Type>
+      </Column>
+      <Column>
+         <Name>adresseAbonne</Name>
+         <Type>VARCHAR(50) </Type>
+      </Column>
+      <Column>
+         <Name>telephoneAbonne</Name>
+         <Type>VARCHAR(50) </Type>
+      </Column>
+      <Column>
+         <Name>dateAdhesion</Name>
+         <Type>DATE</Type>
+      </Column>
+      <Column>
+         <Name>dateNaissance</Name>
+         <Type>DATE</Type>
+      </Column>
+      <Column>
+         <Name>IdCategorieProfessionnelle</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>IdAbonn&#233;</Key>
+      </PK>
+      <FK>
+         <Key>IdCategorieProfessionnelle</Key>
+         <Reference>CategoriesProfessionnelle(IdCategorieProfessionnelle)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>Livres</Name>
+      <Column>
+         <Name>IdLivre</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>codeRayon</Name>
+         <Type>VARCHAR(50) </Type>
+         <Property>UNIQUE</Property>
+      </Column>
+      <Column>
+         <Name>dateAcquisition</Name>
+         <Type>DATE</Type>
+      </Column>
+      <Column>
+         <Name>IdUsure</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>IdEditeur</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>IdCatalogue</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>IdLivre</Key>
+      </PK>
+      <AK>
+         <Key>codeRayon</Key>
+      </AK>
+      <FK>
+         <Key>IdUsure</Key>
+         <Reference>Usures(IdUsure)</Reference>
+      </FK>
+      <FK>
+         <Key>IdEditeur</Key>
+         <Reference>Editeurs(IdEditeur)</Reference>
+      </FK>
+      <FK>
+         <Key>IdCatalogue</Key>
+         <Reference>Catalogues(IdCatalogue)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>classifie</Name>
+      <Column>
+         <Name>IdLivre</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>IdGenre</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <PK>
+         <Key>IdLivre, IdGenre</Key>
+      </PK>
+      <FK>
+         <Key>IdLivre</Key>
+         <Reference>Livres(IdLivre)</Reference>
+      </FK>
+      <FK>
+         <Key>IdGenre</Key>
+         <Reference>Genres(IdGenre)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>ecrit</Name>
+      <Column>
+         <Name>IdLivre</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>IdAuteur</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <PK>
+         <Key>IdLivre, IdAuteur</Key>
+      </PK>
+      <FK>
+         <Key>IdLivre</Key>
+         <Reference>Livres(IdLivre)</Reference>
+      </FK>
+      <FK>
+         <Key>IdAuteur</Key>
+         <Reference>Auteurs(IdAuteur)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>Emprunte</Name>
+      <Column>
+         <Name>IdAbonn&#233;</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>IdLivre</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>datePret</Name>
+         <Type>DATE</Type>
+      </Column>
+      <Column>
+         <Name>dateRetour</Name>
+         <Type>DATE</Type>
+      </Column>
+      <PK>
+         <Key>IdAbonn&#233;, IdLivre</Key>
+      </PK>
+      <FK>
+         <Key>IdAbonn&#233;</Key>
+         <Reference>Abonnes(IdAbonn&#233;)</Reference>
+      </FK>
+      <FK>
+         <Key>IdLivre</Key>
+         <Reference>Livres(IdLivre)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>demande</Name>
+      <Column>
+         <Name>IdAbonn&#233;</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <Column>
+         <Name>IdLivre</Name>
+         <Type>INT AUTO_INCREMENT</Type>
+      </Column>
+      <PK>
+         <Key>IdAbonn&#233;, IdLivre</Key>
+      </PK>
+      <FK>
+         <Key>IdAbonn&#233;</Key>
+         <Reference>Abonnes(IdAbonn&#233;)</Reference>
+      </FK>
+      <FK>
+         <Key>IdLivre</Key>
+         <Reference>Livres(IdLivre)</Reference>
+      </FK>
+   </Table>
+</Database>
