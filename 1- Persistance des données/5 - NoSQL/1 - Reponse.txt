@@ -1,0 +1,7 @@
+1 - Not only SQL
+2 - Permet de stocker des données sous formes non structuré (pas de relation)
+3 - Trop de données donc recherche lentes (ex: facebook, amazon). Nouveau systeme de stockage de données
+4 - Non il y en a 4 : paire clé / valeur, orientée colonne, orientée graph, et orientée document
+5 - Quand il y a énormement de données
+
+https://datascientest.com/nosql
