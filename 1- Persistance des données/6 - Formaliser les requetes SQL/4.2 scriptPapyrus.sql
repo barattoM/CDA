@@ -28,13 +28,15 @@ select numcom, datcom from entcom where obscom <> "";
 
 8. Lister le total de chaque commande par total décroissant (Affichage numéro de commande et total)
 
-SELECT fr.numcom, SUM(prixtotal) FROM (SELECT t.numcom, t.qtecde*t.priuni as prixtotal FROM ligcom  as t INNER JOIN entcom as f ON t.numcom = f.numcom) as fr GROUP BY numcom;
+SELECT numcom, SUM(qtecde*priuni) as total FROM ligcom GROUP BY numcom order by total DESC;
 
 9. Lister les commandes dont le total est supérieur à 10 000€ ; on exclura dans le calcul du total les articles commandés en quantité supérieure ou égale à 1000. (Affichage numéro de commande et total)
 
-
+SELECT numcom, SUM(qtecde*priuni) as total FROM ligcom WHERE qtecde<1000 GROUP BY numcom having total>10000;
 
 10.Lister les commandes par nom fournisseur (Afficher le nom du fournisseur, le numéro de commande et la date)
+
+
 
 11.Sortir les produits des commandes ayant le mot urgent en observation? (Afficher le numéro de commande, le nom du fournisseur, le libellé du produit et le sous total = quantité commandée * Prix unitaire)
 
