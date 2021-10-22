@@ -69,7 +69,7 @@ select nomemp, fonction, nodep from employe where nodep=10 and fonction not in (
 
 10.	Donner la liste des noms, fonctions et numéros de département des directeurs qui ne sont pas directeur dans le département 30
 
-
+SELECT ara FROM fezfz INNER JOIN table ON cle=cle WHERE condition GROUP BY colonne HAVING condition ORDER BY 
 
 11.	Donner la liste des noms, fonctions et salaires des employés qui gagnent entre 1200 € et 1300 €
 

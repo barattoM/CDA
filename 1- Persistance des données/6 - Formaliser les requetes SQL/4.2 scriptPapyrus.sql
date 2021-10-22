@@ -53,7 +53,7 @@ Select numcom, datcom From entcom as e inner join fournis as f on f.numfou=e.num
 
 14.Dans les articles susceptibles d’être vendus, lister les articles moins chers (basés sur Prix1) que le moins cher des rubans (article dont le premier caractère commence par R). On affichera le libellé de l’article et prix1
 
-SELECT libart, prix1 from vente as v inner join produit as p on v.codart=p.codart where prix1<(SELECT MIN(prix1) from vente where codart like "R%") and stkphy>0;
+SELECT libart, prix1 from vente as v inner join produit as p on v.codart=p.codart where prix1<(SELECT MIN(prix1) from vente where codart like "R%");
 
 15.Editer la liste des fournisseurs susceptibles de livrer les produits dont le stock est inférieur ou égal à 150 % du stock d alerte. La liste est triée par produit puis fournisseur
 
@@ -73,7 +73,7 @@ Select libart, sum(qtecde) as totalCommande, qteann from produit as p inner join
 
 19.Calculer le chiffre d affaire par fournisseur pour l année 93 sachant que les prix indiqués sont hors taxes et que le taux de TVA est 20%.
 
-SELECT numfou, SUM(qtecde*priuni*0.2) as total FROM ligcom as l inner join entcom as e on e.numcom=l.numcom where YEAR(datcom)=2018 group by numfou; 
+SELECT numfou, SUM(qtecde*priuni*1.2) as total FROM ligcom as l inner join entcom as e on e.numcom=l.numcom where YEAR(datcom)=2018 group by numfou; 
 
 1. Application d une augmentation de tarif de 4% pour le prix 1, 2% pour le prix2 pour le fournisseur 9180
 
