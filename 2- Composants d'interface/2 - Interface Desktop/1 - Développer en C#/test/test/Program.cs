@@ -350,7 +350,7 @@ namespace test
 
             //EXERCICE 11
 
-            Console.WriteLine("Donnez heures de début");
+            /*Console.WriteLine("Donnez heures de début");
             int heureD = int.Parse(Console.ReadLine());
             Console.WriteLine("Donnez minutes de début");
             int minD = int.Parse(Console.ReadLine());
@@ -367,24 +367,618 @@ namespace test
             {
                 if (heureD==heureF)
                 {
-                    Console.WriteLine("Temps écoulés : "+minF-minD);
+                    Console.WriteLine("Temps écoulés : "+(minF-minD) +" min");
                 }
                 else
                 {
-                    if (minF>minD)
+                    if (minF>=minD)
                     {
-                        Console.WriteLine("Temps écoulés : " + heureF-heureD + "h"+minF-minD);
+                        Console.WriteLine("Temps écoulés : " + (heureF-heureD) + "h"+(minF-minD)+" min");
                     }
                     else
                     {
-                        int diff = 60 - minF + minD;
-                        if (diff>=60)
+                        //10h30 11h29 ou 10h30 12h29
+                        int diff=60 - minD + minF;
+                        //Si une heure ne sait pas encore écoulée
+                        if (heureD+1 == heureF)
                         {
-
-                            Console.WriteLine("Temps écoulés : ");
+                            Console.WriteLine("Temps écoulés : 00h" + diff + " min");
                         }
+                        else // Si une heure s'est déja écoulée (on retire une heure à la différence d'heure car la suivante ne s'est pas écoulée)
+                        {
+                            Console.WriteLine("Temps écoulés : " + ((heureF - heureD)-1) + "h" + diff + " min");
+                        }
+                        
                     }
                 }
+            }*/
+
+            //EXERCICE 12
+
+            /*Console.WriteLine("Donnez un jour");
+            int jour = int.Parse(Console.ReadLine());
+            Console.WriteLine("Donnez un mois");
+            int mois = int.Parse(Console.ReadLine());
+            Console.WriteLine("Donnez une année");
+            int annee = int.Parse(Console.ReadLine());
+
+            bool bissex;
+            //Check annee bissextile
+            if (annee%4==0)
+            {
+                if (annee % 100 == 0)
+                {
+                    if (annee%400 == 0)
+                    {
+                        bissex = true;
+                    }
+                    else
+                    {
+                        bissex = false;
+                    }
+                }
+                else
+                {
+                    bissex = true;
+                }
+            }
+            else
+            {
+                bissex = false;
+            }
+
+            if (mois==2)
+            {
+                if (jour==28)
+                {
+                    if (bissex)
+                    {
+                        Console.WriteLine("Jour suivant : "+ (jour+1)+"/"+mois+"/"+annee);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Jour suivant : 1/" + (mois+1) + "/" + annee);
+                    }
+                }
+                else
+                {
+                    if(jour == 29)
+                    {
+                        Console.WriteLine("Jour suivant : 1/" + (mois + 1) + "/" + annee);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Jour suivant : " + (jour + 1) + "/" + mois + "/" + annee);
+                    }
+                }
+            }
+            else
+            {
+                //mois de 31 jours
+                if(mois==1 || mois == 3 || mois == 5 || mois == 7 || mois == 8 || mois == 10 || mois == 12)
+                {
+                    if (jour==31)
+                    {
+                        if (mois==12)
+                        {
+                            Console.WriteLine("Jour suivant : 1/1/" + (annee + 1));
+                        }
+                        else
+                        {
+                            Console.WriteLine("Jour suivant : 1/" + (mois+1) + "/" + annee);
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Jour suivant : " + (jour + 1) + "/" + mois + "/" + annee);
+                    }
+                }
+                else //mois de 30 jours
+                {
+                    if (jour==30)
+                    {
+                        Console.WriteLine("Jour suivant : 1/" + (mois + 1) + "/" + annee);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Jour suivant : " + (jour + 1) + "/" + mois + "/" + annee);
+                    }
+                }
+                
+            }*/
+
+            //Exercice 13
+
+            /*Console.WriteLine("Donnez une borne a");
+            int num1;
+            String borneA = Console.ReadLine();
+            Console.WriteLine("Donnez une borne b");
+            int num2;
+            String borneB = Console.ReadLine();
+
+            if (int.TryParse(borneA,out num1)==false | int.TryParse(borneB, out num2)==false)
+            {
+                Console.WriteLine("Erreur de saisie");
+            }
+            else
+            {
+                if (num1>num2)
+                {
+                    Console.WriteLine("La borne A doit être inférieur à la borne B");
+                }
+                else
+                {
+                    Console.WriteLine("les bornes sont bien saisie");
+                }
+            }*/
+
+            //EXERCICE 14
+
+            /*Console.WriteLine("Donnez une borne a");
+            int num1;
+            String borneA = Console.ReadLine();
+            Console.WriteLine("Donnez une borne b");
+            int num2;
+            String borneB = Console.ReadLine();
+
+            if (int.TryParse(borneA, out num1) == false | int.TryParse(borneB, out num2) == false)
+            {
+                Console.WriteLine("Erreur de saisie");
+            }
+            else
+            {
+                if (num1 > num2)
+                {
+                    Console.WriteLine("La borne A doit être inférieur à la borne B");
+                }
+                else
+                {
+                    Console.WriteLine("les bornes sont bien saisie");
+                }
+            }
+            Console.WriteLine("Donnez une valeur");
+            int x = int.Parse(Console.ReadLine());
+            if (x>=num1 && x<=num2)
+            {
+                Console.WriteLine("La valeur est dans les bornes");
+            }
+            else
+            {
+                Console.WriteLine("La valeur n'est pas dans les bornes");
+            }*/
+
+            //EXERCICE 15
+
+            /*Console.WriteLine("Donnez xHautGauche");
+            int xHautGauche;
+            String xh = Console.ReadLine();
+
+            Console.WriteLine("Donnez yHautGauche");
+            int yHautGauche;
+            String yh = Console.ReadLine();
+
+            Console.WriteLine("Donnez xBasDroite");
+            int xBasDroite;
+            String xb = Console.ReadLine();
+
+            Console.WriteLine("Donnez yBasDroite");
+            int yBasDroite;
+            String yb = Console.ReadLine();
+
+            if (int.TryParse(xh, out xHautGauche) == false | int.TryParse(yh, out yHautGauche) == false | int.TryParse(xb, out xBasDroite) == false | int.TryParse(yb, out yBasDroite) == false)
+            {
+                Console.WriteLine("Erreur de saisie");
+            }*/
+
+            //EXERCICE 16
+            /*Console.WriteLine("Donnez xHautGauche");
+            int xHautGauche;
+            String xh = Console.ReadLine();
+
+            Console.WriteLine("Donnez yHautGauche");
+            int yHautGauche;
+            String yh = Console.ReadLine();
+
+            Console.WriteLine("Donnez xBasDroite");
+            int xBasDroite;
+            String xb = Console.ReadLine();
+
+            Console.WriteLine("Donnez yBasDroite");
+            int yBasDroite;
+            String yb = Console.ReadLine();
+
+            Console.WriteLine("Donnez une coordonnée x");
+            int x =int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Donnez une coordonnée y");
+            int y = int.Parse(Console.ReadLine());
+
+            if (int.TryParse(xh, out xHautGauche) == false | int.TryParse(yh, out yHautGauche) == false | int.TryParse(xb, out xBasDroite) == false | int.TryParse(yb, out yBasDroite) == false)
+            {
+                Console.WriteLine("Erreur de saisie");
+            }
+            if (x>xHautGauche && x<xBasDroite && y>yHautGauche && y<yBasDroite)
+            {
+                Console.WriteLine("Le point se trouve dans le rectangle");
+            }
+            else
+            {
+                Console.WriteLine("Le point ne se trouve pas dans le rectangle");
+            }*/
+
+            ////////////////////////////////////////////// Boucles \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+            //Exercice 1
+
+            /*int a = 1, b = 0, n = 5;
+            while (a <= n)
+                b += a++;
+            Console.WriteLine(a + " , " + b);*/
+
+            //Note : 6 , 15
+            /* 
+             * 2 , 1
+             * 3 , 3
+             * 4 , 6
+             * 5 , 10
+             * 6 , 15
+             */
+
+            //EXERCICE 2
+
+            /*int a = 0, b = 0, c = 0, d = 3, m = 3, n = 4;
+            for (a = 0; a < m; a++)
+            {
+                d = 0;
+                for (b = 0; b < n; b++)
+                    d += b;
+                c += d;
+            }
+            Console.WriteLine(a + " , " + b + " , " + c + " , " + d + " . ");*/
+            //Note : a=3 , b=4 , c=18 , d=6
+
+
+            //EXERCICE 3
+
+            /*int a, b, c, d;
+            a = 1; b = 2;
+            c = a / b;
+            d = (a == b) ? 3 : 4;
+            Console.WriteLine(c + " , " + d + " . ");
+            a = ++b;
+            b %= 3;
+            Console.WriteLine(a + " , " + b + " . ");
+            b = 1;
+            for (a = 0; a <= 10; a++)
+                c = ++b;
+            Console.WriteLine(a + " , " + b + " , " + c + " , " + d + " . ");*/
+
+            //Note : 1- c=0 , d=4
+            // 2- a=3 , b=0
+            // 3- a=11 , b=12 , c=12, d=4
+
+            //EXERCICE 4
+
+            /*Console.WriteLine("Donnez une valeur numérique");
+            int nb = int.Parse(Console.ReadLine());
+
+            for (int i = nb; i >= 0; i--)
+            {
+                Console.WriteLine(i);
+            }
+
+            int i = nb;
+            while (i >= 0)
+            {
+                Console.WriteLine(i);
+                i--;
+            }
+
+            int i = nb;
+            do
+            {
+                Console.WriteLine(i);
+                i--;
+            } while (i >= 0);*/
+
+            //EXERCICE 5
+
+            /*Console.WriteLine("Donnez une valeur numérique");
+            int nb = int.Parse(Console.ReadLine());
+            int fact = 0;
+
+            for (int i = 0; i <= nb; i++)
+            {
+                fact += i;
+            }
+            Console.WriteLine(fact);
+
+            int i = 0;
+            while (i <= nb)
+            {
+                fact += i;
+                i++;
+            }
+            Console.WriteLine(fact);
+
+            int i = 0;
+            do
+            {
+                fact += i;
+                i++;
+            } while (i <= nb);
+            Console.WriteLine(fact);*/
+
+            //EXERCICE 6
+
+            /*Console.WriteLine("Donnez une valeur numérique");
+            int nb = int.Parse(Console.ReadLine());
+
+            for (int i=0;i<=10;i++)
+            {
+                Console.WriteLine(i+" * "+nb+" = "+(nb*i));
+            }*/
+
+            //EXERCICE 7
+
+            /*Console.Write("*");
+            for (int i = 0; i <= 10; i++)
+            {
+                Console.Write("   "+i);
+            }
+            
+            for (int i=0; i <= 10; i++)
+            {
+                Console.WriteLine();
+                Console.Write(i);
+                for (int j = 0; j <= 10; j++)
+                {
+                    Console.Write("   " + i*j);
+                }
+            }*/
+
+            //Exercice 8
+
+            /*Console.WriteLine("Donnez une valeur numérique");
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine("Donnez une 2e valeur numérique");
+            int n = int.Parse(Console.ReadLine());
+            if (n<0)
+            {
+                Console.WriteLine("n négatif");
+            }
+            else
+            {
+                for (int i=1; i<n;i++)
+                {
+                    b *= b;
+                }
+            }
+            Console.WriteLine(b);*/
+
+            //Exercice 9
+
+            /*Console.WriteLine("Donnez une valeur numérique");
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write("X ");
+                }
+            }*/
+
+
+            //Exercice 10
+
+            /*String saisie="=";
+            float nb;
+            float total = 0;
+            bool init = true;
+            do
+            {
+                if (init)
+                {
+                    Console.WriteLine("Saisissez un opérande");
+                    saisie = Console.ReadLine();
+                    total = float.Parse(saisie);
+                    
+                }
+                
+                if (saisie != "=")
+                {
+                    if (init)
+                    {
+                        Console.WriteLine("Saisissez un opérateur (+,-,*,/)");
+                        saisie = Console.ReadLine();
+                        init = false;
+                    }
+                    
+                    Console.WriteLine("Saisissez un opérande");
+                    nb = float.Parse(Console.ReadLine());
+                    switch (saisie)
+                    {
+                        case "+":
+                            total += nb;
+                            break;
+                        case "-":
+                            total -= nb;
+                            break;
+                        case "*":
+                            total *= nb;
+                            break;
+                        case "/":
+                            if (nb==0)
+                            {
+                                Console.WriteLine("Division par 0");
+                            }
+                            else
+                            {
+                                total /= nb;
+                            }
+                            break;
+                    }
+                    Console.WriteLine("Total = "+total);
+                    Console.WriteLine("Saisissez un opérateur (+,-,*,/) *** = pour terminer ***");
+                    saisie = Console.ReadLine();
+                }
+            } while (saisie != "=");
+            Console.WriteLine("Fin du calcul,total = " + total);*/
+
+            //Exercice 11
+
+            /*String saisie = "=";
+            float nb;
+            float total = 0;
+            bool init = true;
+            float tempTotal;
+            do
+            {
+                if (init)
+                {
+                    Console.WriteLine("Saisissez un opérande");
+                    saisie = Console.ReadLine();
+                    total = float.Parse(saisie);
+
+                }
+
+                if (saisie != "=")
+                {
+                    if (init)
+                    {
+                        Console.WriteLine("Saisissez un opérateur (+,-,*,/,$)");
+                        saisie = Console.ReadLine();
+                        init = false;
+                    }
+
+                    Console.WriteLine("Saisissez un opérande");
+                    nb = float.Parse(Console.ReadLine());
+                    switch (saisie)
+                    {
+                        case "+":
+                            total += nb;
+                            break;
+                        case "-":
+                            total -= nb;
+                            break;
+                        case "*":
+                            total *= nb;
+                            break;
+                        case "/":
+                            if (nb == 0)
+                            {
+                                Console.WriteLine("Division par 0");
+                            }
+                            else
+                            {
+                                total /= nb;
+                            }
+                            break;
+                        case "$":
+                            tempTotal = total;
+                            for (int i=0;i<nb;i++)
+                            {
+                                total += tempTotal * nb;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                    Console.WriteLine("Total = " + total);
+                    Console.WriteLine("Saisissez un opérateur (+,-,*,/) *** = pour terminer ***");
+                    saisie = Console.ReadLine();
+                }
+            } while (saisie != "=");
+            Console.WriteLine("Fin du calcul,total = " + total);*/
+
+            //Exercice 12
+
+            /*String saisie;
+            double nb;
+            double total;
+            double tempTotal;
+
+            //Initialisation de la calculatrice
+            Console.WriteLine("Saisissez un opérande");
+            saisie = Console.ReadLine();
+            total = double.Parse(saisie);
+            Console.WriteLine("Saisissez un opérateur (+,-,*,/,$,%,!)");
+            saisie = Console.ReadLine();
+
+            do
+            {
+                if (saisie != "=")
+                {
+                    //opérations unaires
+                    if (saisie=="%" || saisie=="!")
+                    {
+                        nb = 0;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Saisissez un opérande");
+                        nb = double.Parse(Console.ReadLine());
+                    }
+
+                    switch (saisie)
+                    {
+                        case "+":
+                            total += nb;
+                            break;
+                        case "-":
+                            total -= nb;
+                            break;
+                        case "*":
+                            total *= nb;
+                            break;
+                        case "/":
+                            if (nb == 0)
+                            {
+                                Console.WriteLine("Division par 0");
+                            }
+                            else
+                            {
+                                total /= nb;
+                            }
+                            break;
+                        case "$":
+                            tempTotal = total;
+                            for (int i = 0; i < nb; i++)
+                            {
+                                total += tempTotal * nb;
+                            }
+                            break;
+                        case "%":
+                            total = Math.Sqrt(total);
+                            break;
+                        case "!":
+                            tempTotal = total;
+                            total = 0;
+                            for (int i=0;i<=tempTotal;i++)
+                            {
+                                total += i;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                    Console.WriteLine("Total = " + total);
+                    Console.WriteLine("Saisissez un opérateur (+,-,*,/) *** = pour terminer ***");
+                    saisie = Console.ReadLine();
+                }
+            } while (saisie != "=");
+            Console.WriteLine("Fin du calcul,total = " + total);*/
+
+            ////////////////////////////////////////////// Chaine de caractères \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+            //Exercice 1
+            String phrase = "Les framboises sont perchées sur le tabouret de mon grand-père.";
+
+            for (int i=0;i<phrase.Length;i++)
+            {
+                Console.Write(phrase.Substring(i));
             }
         }
     }
