@@ -685,26 +685,26 @@ namespace test
 
             /*Console.WriteLine("Donnez une valeur numérique");
             int nb = int.Parse(Console.ReadLine());
-            int fact = 0;
+            int fact = 1;
 
             for (int i = 0; i <= nb; i++)
             {
-                fact += i;
+                fact *= i;
             }
             Console.WriteLine(fact);
 
-            int i = 0;
+            int i = 1;
             while (i <= nb)
             {
-                fact += i;
+                fact *= i;
                 i++;
             }
             Console.WriteLine(fact);
 
-            int i = 0;
+            int i = 1;
             do
             {
-                fact += i;
+                fact *= i;
                 i++;
             } while (i <= nb);
             Console.WriteLine(fact);*/
@@ -724,16 +724,16 @@ namespace test
             /*Console.Write("*");
             for (int i = 0; i <= 10; i++)
             {
-                Console.Write("   "+i);
+                Console.Write("   " + i);
             }
-            
-            for (int i=0; i <= 10; i++)
+
+            for (int i = 0; i <= 10; i++)
             {
                 Console.WriteLine();
                 Console.Write(i);
                 for (int j = 0; j <= 10; j++)
                 {
-                    Console.Write("   " + i*j);
+                    Console.Write("   " + i * j);
                 }
             }*/
 
@@ -743,13 +743,13 @@ namespace test
             int b = int.Parse(Console.ReadLine());
             Console.WriteLine("Donnez une 2e valeur numérique");
             int n = int.Parse(Console.ReadLine());
-            if (n<0)
+            if (n < 0)
             {
                 Console.WriteLine("n négatif");
             }
             else
             {
-                for (int i=1; i<n;i++)
+                for (int i = 1; i < n; i++)
                 {
                     b *= b;
                 }
@@ -1004,10 +1004,10 @@ namespace test
             int i = int.Parse(Console.ReadLine());
             Console.WriteLine("Entrez un indice j");
             int j = int.Parse(Console.ReadLine());
-            String t2 ="";
-            
-            t2=t.Insert(0,t.Substring(i,(j-i+1))) ;
-            t2 = t2.Substring(0, (j - i + 1)); ;
+            String t2 = "";
+
+            t2 = t.Insert(0, t.Substring(i, (j - i + 1)));
+            t2 = t2.Substring(0, (j - i + 1));
             Console.WriteLine(t2);*/
 
             //EXERCICE 4
@@ -1023,7 +1023,7 @@ namespace test
 
             //Exercice 5
 
-            Console.WriteLine("Entrez une chaine de caractère");
+            /*Console.WriteLine("Entrez une chaine de caractère");
             String t = Console.ReadLine();
             Console.WriteLine("Entrez un caractère");
             String a = Console.ReadLine();
@@ -1043,9 +1043,158 @@ namespace test
                     t2 = t2 + c;
                 }
             }
-            Console.WriteLine(t2);
+            Console.WriteLine(t2);*/
 
             //EXERCICE 6
+
+            /*Console.WriteLine("Entrez un nom de fichier");
+            String t = Console.ReadLine();
+            int i=t.LastIndexOf(".");
+            Console.WriteLine("Nom du fichier : " + t.Substring(0, i));
+            Console.WriteLine("Nom de l'extension : " + t.Substring(i+1));*/
+
+            //EXERCICE 7
+
+            /*Console.WriteLine("Entrez une expression arithmétique");
+            String t = Console.ReadLine();
+            String c;
+            int countOuv = 0;
+            int countFer = 0;
+            String erreur =  "bien";
+            *//*for (int i = 0; i < t.Length; i++)
+            {
+                c = t.Substring(i, 1);
+                if (c == "(")
+                {
+                    countOuv++;
+                }
+                else if (c == ")")
+                {
+                    countFer++;
+                }
+                if (countOuv < countFer)
+                {
+                    erreur = "mal";
+                }
+            }
+            if (countFer!=countOuv)
+            {
+                erreur = "mal";
+            }
+            Console.WriteLine("L'expression est "+erreur+" parenthésée");*//*
+            int i = 0;
+            do
+            {
+                c = t.Substring(i, 1);
+                if (c == "(")
+                {
+                    countOuv++;
+                }
+                else if (c == ")")
+                {
+                    countFer++;
+                }
+                if (countOuv < countFer)
+                {
+                    erreur = "mal";
+                }
+                i++;
+            } while (i<t.Length && erreur=="bien");
+            if (countFer!=countOuv)
+            {
+                erreur = "mal";
+            }
+            Console.WriteLine("L'expression est " + erreur + " parenthésée");*/
+
+            ////////////////////////////////////////////// Tableaux \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+            //Exercice 1
+
+            /*char[] c = new char[4];
+            c[0] = 'a';
+            c[3] = 'J';
+            c[2] = 'k';
+            c[1] = 'R';
+            for (int k = 0; k < 4; k++)
+                Console.WriteLine(c[k]);
+            for (int k = 0; k < 4; k++)
+                c[k]++;
+            foreach (char i in c)
+                Console.WriteLine(i);
+
+            // Note : a R k J , b S l K*/
+
+            //Exercice 2
+
+            /*int[] k;
+            k = new int[10];
+            k[0] = 1;
+            for (int i = 1; i < 10; i++)
+                k[i] = 0;
+            for (int j = 1; j <= 3; j++)
+                for (int i = 1; i < 10; i++)
+                    k[i] += k[i - 1];
+            foreach (int i in k)
+                Console.WriteLine(i);
+
+            // Note : 1 3 6 10 15 21 28 36 45 55*/
+
+            //EXERCICE 3 
+
+            /*int[] k;
+            k = new int[10];
+            k[0] = 1;
+            k[1] = 1;
+            for (int i = 2; i < 10; i++)
+                k[i] = 0;
+            for (int j = 1; j <= 3; j++)
+                for (int i = 1; i < 10; i++)
+                    k[i] += k[i - 1];
+            foreach (int p in k)
+                Console.WriteLine(p);
+
+            //Note : 1 4 9 16 25 36 49 64 81 100*/
+
+            //Exercice 4
+
+            /*int[] T = new int[10] {1,2,3,4,5,6,7,8,9,10};
+            foreach (int p in T)
+                Console.WriteLine(p);*/
+
+            //Exercice 5
+            /*int[] T = new int[10];
+            for (int i =0;i<T.Length;i++)
+            {
+                T[i] = i + 1;
+            }
+            foreach (int p in T)
+                Console.WriteLine(p);*/
+
+            //Exercice 6
+
+            /*int[] T = new int[10];
+            int somme = 0;
+            for (int i = 0; i < T.Length; i++)
+            {
+                T[i] = i + 1;
+            }
+            foreach (int p in T)
+                somme+=p;
+            Console.WriteLine(somme);*/
+
+            //Exercice 7
+
+            /*int[] T = new int[10];
+            for (int i = 0; i < T.Length; i++)
+            {
+                T[i] = i + 1;
+            }
+            Console.WriteLine("Donnez une valeur");
+            int t=int.Parse(Console.ReadLine());
+
+            Console.WriteLine(Array.Exists(T, elt=> elt==t));*/
+
+            //EXERCICE 8
 
 
         }
