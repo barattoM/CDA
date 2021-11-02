@@ -743,6 +743,7 @@ namespace test
             int b = int.Parse(Console.ReadLine());
             Console.WriteLine("Donnez une 2e valeur numérique");
             int n = int.Parse(Console.ReadLine());
+            int total=1;
             if (n < 0)
             {
                 Console.WriteLine("n négatif");
@@ -751,10 +752,10 @@ namespace test
             {
                 for (int i = 1; i < n; i++)
                 {
-                    b *= b;
+                    total *= b;
                 }
             }
-            Console.WriteLine(b);*/
+            Console.WriteLine(total);*/
 
             //Exercice 9
 
@@ -970,6 +971,98 @@ namespace test
                 }
             } while (saisie != "=");
             Console.WriteLine("Fin du calcul,total = " + total);*/
+
+            static int demanderEntierPositif()
+            {
+                int nb;
+                bool test;
+                do
+                {
+                    Console.WriteLine("Donnez un entier");
+                    test = int.TryParse(Console.ReadLine(), out nb);
+                } while (test == false || nb < 0);
+                return nb;
+            }
+
+            static double demanderDouble()
+            {
+                double nb;
+                bool test;
+                do
+                {
+                    Console.WriteLine("Donnez un double");
+                    test = double.TryParse(Console.ReadLine(), out nb);
+                } while (test == false);
+                return nb;
+            }
+
+            static double demanderDoubleNonNul()
+            {
+                double nb;
+                bool test;
+                do
+                {
+                    Console.WriteLine("Donnez un double non nul");
+                    test = double.TryParse(Console.ReadLine(), out nb);
+                } while (test == false || nb != 0);
+                return nb;
+            }
+
+            static char demanderOperateur()
+            {
+                char c;
+                do
+                {
+                    Console.WriteLine("Donnez un double");
+                    c = char.Parse(Console.ReadLine());
+                } while (c != '+' && c != '-' && c != '*' && c != '/' && c != '$' && c != 'V' && c != '!');
+                return c;
+            }
+
+            static double calcul(double valeur,char operateur)
+            {
+                double nb=0;
+                switch (operateur)
+                {
+                    case ('V'):
+                        nb =Math.Sqrt(valeur);
+                        break;
+                    case ('!'):
+
+                        nb = 1;
+                        for (int x = 1; x <= valeur; x++)
+                        {
+                            nb *= x;
+                        }
+                        break;
+                }
+                return nb;
+            }
+
+
+            static double calculSimple(double valeur1,double valeur2, char operateur)
+            {
+                double nb = 1;
+                switch (operateur)
+                {
+                    case ('+'):
+                        nb = valeur1 + valeur2;
+                        break;
+                    case ('-'):
+                        nb = valeur1 - valeur2;
+                        break;
+                    case ('*'):
+                        nb = valeur1 * valeur2;
+                        break;
+                    case ('/'):
+                            nb = valeur1 / valeur2;
+                        break;
+                    case ('$'):
+                        nb=Math.Pow(valeur1, valeur2);
+                        break;
+                }
+                return nb;
+            }
 
             ////////////////////////////////////////////// Chaine de caractères \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
