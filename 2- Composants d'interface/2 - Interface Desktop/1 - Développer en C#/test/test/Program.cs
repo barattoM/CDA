@@ -978,7 +978,7 @@ namespace test
 
             for (int i=0;i<phrase.Length;i++)
             {
-                Console.Write(phrase.Substring(i));
+                Console.Write(phrase.Substring(i,1));
             }
         }
     }
