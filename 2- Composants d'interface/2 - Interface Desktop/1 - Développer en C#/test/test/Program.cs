@@ -974,12 +974,80 @@ namespace test
             ////////////////////////////////////////////// Chaine de caractères \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
             //Exercice 1
-            String phrase = "Les framboises sont perchées sur le tabouret de mon grand-père.";
+            /*String phrase = "Les framboises sont perchées sur le tabouret de mon grand-père.";
 
             for (int i=0;i<phrase.Length;i++)
             {
                 Console.Write(phrase.Substring(i,1));
+            }*/
+
+            //Exercice 2
+
+            /*Console.WriteLine("Entrez une chaine de caractère");
+            String t = Console.ReadLine();
+            Console.WriteLine("Entrez un indice i");
+            int i = int.Parse(Console.ReadLine());
+            Console.WriteLine("Entrez un indice j");
+            int j = int.Parse(Console.ReadLine());
+            String t2="";
+            for (int k=i;k<=j;k++)
+            {
+                t2 = t2 + t.Substring(k,1);
             }
+            Console.WriteLine(t2);*/
+
+            //Exercice 3
+
+            /*Console.WriteLine("Entrez une chaine de caractère");
+            String t = Console.ReadLine();
+            Console.WriteLine("Entrez un indice i");
+            int i = int.Parse(Console.ReadLine());
+            Console.WriteLine("Entrez un indice j");
+            int j = int.Parse(Console.ReadLine());
+            String t2 ="";
+            
+            t2=t.Insert(0,t.Substring(i,(j-i+1))) ;
+            t2 = t2.Substring(0, (j - i + 1)); ;
+            Console.WriteLine(t2);*/
+
+            //EXERCICE 4
+
+            /*Console.WriteLine("Entrez une chaine de caractère");
+            String t = Console.ReadLine();
+            Console.WriteLine("Entrez un caractère");
+            String a = Console.ReadLine();
+            Console.WriteLine("Entrez un caractère");
+            String b = Console.ReadLine();
+            String t2=t.Replace(a,b) ;
+            Console.WriteLine(t2);*/
+
+            //Exercice 5
+
+            Console.WriteLine("Entrez une chaine de caractère");
+            String t = Console.ReadLine();
+            Console.WriteLine("Entrez un caractère");
+            String a = Console.ReadLine();
+            Console.WriteLine("Entrez un caractère");
+            String b = Console.ReadLine();
+            String t2="";
+            String c;
+            for (int i=0;i<t.Length; i++)
+            {
+                c=t.Substring(i,1);
+                if (c==a)
+                {
+                    t2 = t2 + b;
+                }
+                else
+                {
+                    t2 = t2 + c;
+                }
+            }
+            Console.WriteLine(t2);
+
+            //EXERCICE 6
+
+
         }
     }
 }
