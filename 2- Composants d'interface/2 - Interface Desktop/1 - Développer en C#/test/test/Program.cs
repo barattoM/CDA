@@ -972,97 +972,163 @@ namespace test
             } while (saisie != "=");
             Console.WriteLine("Fin du calcul,total = " + total);*/
 
-            static int demanderEntierPositif()
+            static int demanderEntierPositif(string texte)
             {
-                int nb;
-                bool test;
+                int valeur;
+                bool conversionReussie;
                 do
                 {
-                    Console.WriteLine("Donnez un entier");
-                    test = int.TryParse(Console.ReadLine(), out nb);
-                } while (test == false || nb < 0);
+                    Console.WriteLine(texte);
+                    conversionReussie = int.TryParse(Console.ReadLine(), out valeur);
+
+                } while (!conversionReussie || valeur < 0);
+                return valeur;
+            }
+
+            static double demanderDouble(string texte)
+            {
+                double nb;
+                bool ok;
+                do
+                {
+                    Console.Write(texte);
+                    ok = double.TryParse(Console.ReadLine(), out nb);
+                } while (!ok);
                 return nb;
             }
 
-            static double demanderDouble()
+            static double demanderDoubleNonNull(string texte)
             {
-                double nb;
-                bool test;
+                double n;
+                bool conversionReussie;
                 do
                 {
-                    Console.WriteLine("Donnez un double");
-                    test = double.TryParse(Console.ReadLine(), out nb);
-                } while (test == false);
-                return nb;
-            }
-
-            static double demanderDoubleNonNul()
-            {
-                double nb;
-                bool test;
-                do
-                {
-                    Console.WriteLine("Donnez un double non nul");
-                    test = double.TryParse(Console.ReadLine(), out nb);
-                } while (test == false || nb != 0);
-                return nb;
+                    Console.WriteLine(texte);
+                    conversionReussie = double.TryParse(Console.ReadLine(), out n);
+                } while (!conversionReussie || n != 0);
+                return n;
             }
 
             static char demanderOperateur()
             {
-                char c;
+                bool ok = true;
+                char op;
+                bool condition;
+
                 do
                 {
-                    Console.WriteLine("Donnez un double");
-                    c = char.Parse(Console.ReadLine());
-                } while (c != '+' && c != '-' && c != '*' && c != '/' && c != '$' && c != 'V' && c != '!');
-                return c;
+                    Console.Write("Entrez un opérateur +,-,*,/,$,!,V : ");
+                    ok = char.TryParse(Console.ReadLine(), out op);
+                    condition = !ok || (op != '+' && op != '-' && op != '*' && op != '/' && op != '$' && op != '!' && op != 'V' && op != 'v');
+                    if (condition)
+                        Console.WriteLine("Saisie incorrecte.");
+
+                } while (condition);
+                return char.ToUpper(op);
             }
 
             static double calcul(double valeur,char operateur)
             {
-                double nb=0;
+                double nb=1;
                 switch (operateur)
                 {
                     case ('V'):
                         nb =Math.Sqrt(valeur);
                         break;
                     case ('!'):
-
-                        nb = 1;
                         for (int x = 1; x <= valeur; x++)
                         {
                             nb *= x;
                         }
                         break;
+                    default:
+                        break;
                 }
                 return nb;
             }
 
-
-            static double calculSimple(double valeur1,double valeur2, char operateur)
+            static double calculSimple(double valeur1, char operateur, double valeur2)
             {
-                double nb = 1;
+                double resultat=0;
                 switch (operateur)
                 {
-                    case ('+'):
-                        nb = valeur1 + valeur2;
+                    case '+':
+                        resultat = valeur1 + valeur2;
                         break;
-                    case ('-'):
-                        nb = valeur1 - valeur2;
+                    case '-':
+                        resultat = valeur1 - valeur2;
                         break;
-                    case ('*'):
-                        nb = valeur1 * valeur2;
+                    case '*':
+                        resultat = valeur1 * valeur2;
                         break;
-                    case ('/'):
-                            nb = valeur1 / valeur2;
+                    case '/':
+                        resultat = valeur1 / valeur2;
                         break;
-                    case ('$'):
-                        nb=Math.Pow(valeur1, valeur2);
+                    case '$':
+                        resultat = Math.Pow(valeur1, valeur2);
+                        break;
+                    default:
                         break;
                 }
-                return nb;
+                return resultat;
             }
+
+            //double value1, value2;
+            //char operateur;
+
+            //value1 = demanderDouble("Donnez un double");
+            //do
+            //{
+            //    operateur = demanderOperateur();
+            //    switch (operateur)
+            //    {
+            //        case '-':
+            //        case '+':
+            //        case '*':
+            //            value2 = demanderDouble("Donnez un double");
+            //            value1 = calculSimple(value1,operateur, value2);
+            //            break;
+            //        case '/':
+            //            value2 = demanderDoubleNonNull("Donnez un double non null");
+            //            value1 = calculSimple(value1,operateur,value2);
+            //            break;
+            //        case '$':
+            //            value2 = demanderEntierPositif("Donnez un entier positif");
+            //            value1 = calculSimple(value1, operateur ,value2);
+            //            break;
+            //        case '!':
+            //            if (value1 % 1 == 0 && value1 > 0) // On vérifie que value1 est un Entier et qu'il est positif.
+            //            {
+            //                value1 = calcul(value1, operateur);
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine("Calcul impossible !");
+            //            }
+            //            break;
+            //        case 'V':
+            //            if (value1 > 0) // On vérifie que value1 est positif.
+            //            {
+            //                value1 = calcul(value1, operateur);
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine("Calcul impossible !");
+            //            }
+            //            break;
+            //        case '=':
+            //            break;
+            //        default:
+            //            Console.WriteLine("Opérateur incorrect.");
+            //            break;
+            //    }
+
+            //    Console.WriteLine("Résultat = " + value1);
+            //    if (operateur == '=')
+            //    {
+            //        Console.WriteLine("Merci d'avoir utiliser cette calculatrice made in AFPA.");
+            //    }
+            //} while (operateur != '=');
 
             ////////////////////////////////////////////// Chaine de caractères \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -1097,17 +1163,14 @@ namespace test
             int i = int.Parse(Console.ReadLine());
             Console.WriteLine("Entrez un indice j");
             int j = int.Parse(Console.ReadLine());
-<<<<<<< HEAD
             String t2 ="";
             
             t2=t.Insert(0,t.Substring(i,(j-i+1))) ;
             t2 = t2.Substring(0, (j - i + 1)); ;
-=======
             String t2 = "";
 
             t2 = t.Insert(0, t.Substring(i, (j - i + 1)));
             t2 = t2.Substring(0, (j - i + 1));
->>>>>>> e68051bab857b1a3015bfe400ef4c91191bca636
             Console.WriteLine(t2);*/
 
             //EXERCICE 4
@@ -1123,37 +1186,28 @@ namespace test
 
             //Exercice 5
 
-<<<<<<< HEAD
-            Console.WriteLine("Entrez une chaine de caractère");
-=======
-            /*Console.WriteLine("Entrez une chaine de caractère");
->>>>>>> e68051bab857b1a3015bfe400ef4c91191bca636
-            String t = Console.ReadLine();
-            Console.WriteLine("Entrez un caractère");
-            String a = Console.ReadLine();
-            Console.WriteLine("Entrez un caractère");
-            String b = Console.ReadLine();
-            String t2="";
-            String c;
-            for (int i=0;i<t.Length; i++)
-            {
-                c=t.Substring(i,1);
-                if (c==a)
-                {
-                    t2 = t2 + b;
-                }
-                else
-                {
-                    t2 = t2 + c;
-                }
-            }
-<<<<<<< HEAD
-            Console.WriteLine(t2);
+            //Console.WriteLine("Entrez une chaine de caractère");
+            //String t = Console.ReadLine();
+            //Console.WriteLine("Entrez un caractère");
+            //String a = Console.ReadLine();
+            //Console.WriteLine("Entrez un caractère");
+            //String b = Console.ReadLine();
+            //String t2="";
+            //String c;
+            //for (int i=0;i<t.Length; i++)
+            //{
+            //    c=t.Substring(i,1);
+            //    if (c==a)
+            //    {
+            //        t2 = t2 + b;
+            //    }
+            //    else
+            //    {
+            //        t2 = t2 + c;
+            //    }
+            //}
+            //Console.WriteLine(t2);
 
-            //EXERCICE 6
-
-=======
-            Console.WriteLine(t2);*/
 
             //EXERCICE 6
 
@@ -1165,13 +1219,13 @@ namespace test
 
             //EXERCICE 7
 
-            /*Console.WriteLine("Entrez une expression arithmétique");
-            String t = Console.ReadLine();
-            String c;
-            int countOuv = 0;
-            int countFer = 0;
-            String erreur =  "bien";
-            *//*for (int i = 0; i < t.Length; i++)
+            //Console.WriteLine("Entrez une expression arithmétique");
+            //String t = Console.ReadLine();
+            //String c;
+            //int countOuv = 0;
+            //int countFer = 0;
+            //String erreur =  "bien";
+            /*for (int i = 0; i < t.Length; i++)
             {
                 c = t.Substring(i, 1);
                 if (c == "(")
@@ -1191,30 +1245,31 @@ namespace test
             {
                 erreur = "mal";
             }
-            Console.WriteLine("L'expression est "+erreur+" parenthésée");*//*
-            int i = 0;
-            do
-            {
-                c = t.Substring(i, 1);
-                if (c == "(")
-                {
-                    countOuv++;
-                }
-                else if (c == ")")
-                {
-                    countFer++;
-                }
-                if (countOuv < countFer)
-                {
-                    erreur = "mal";
-                }
-                i++;
-            } while (i<t.Length && erreur=="bien");
-            if (countFer!=countOuv)
-            {
-                erreur = "mal";
-            }
-            Console.WriteLine("L'expression est " + erreur + " parenthésée");*/
+            Console.WriteLine("L'expression est "+erreur+" parenthésée");*/
+
+            //int i = 0;
+            //do
+            //{
+            //    c = t.Substring(i, 1);
+            //    if (c == "(")
+            //    {
+            //        countOuv++;
+            //    }
+            //    else if (c == ")")
+            //    {
+            //        countFer++;
+            //    }
+            //    if (countOuv < countFer)
+            //    {
+            //        erreur = "mal";
+            //    }
+            //    i++;
+            //} while (i<t.Length && erreur=="bien");
+            //if (countFer!=countOuv)
+            //{
+            //    erreur = "mal";
+            //}
+            //Console.WriteLine("L'expression est " + erreur + " parenthésée");
 
             ////////////////////////////////////////////// Tableaux \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -1306,8 +1361,234 @@ namespace test
 
             //EXERCICE 8
 
->>>>>>> e68051bab857b1a3015bfe400ef4c91191bca636
+            //int[] T = new int[10];
+            //int[] T2 = new int[10];
+            //for (int i = 0; i < T.Length; i++)
+            //{
+            //    T[i] = i + 1;
+            //}
+            //for (int i = 0; i < T2.Length; i++)
+            //{
+            //    if (i+1>= T.Length)
+            //    {
+            //        T2[i] = T[(T.Length - 1) - i];
+            //    }
+            //    else
+            //    {
+            //        T2[i] = T[i + 1];
+            //    } 
+            //}
+            //foreach (int elt in T2)
+            //    Console.Write(elt);
 
+
+
+            //int nb = 4;
+            //int[] t = new int[10];
+            //int[] tt = new int[10];
+            //for (int i = 0; i < t.Length; i++)
+            //{
+            //    t[i] = i + 1;
+            //}
+
+            //for (int i = 0; i < t.Length - nb; i++)
+            //{
+            //    tt[i] = t[i + nb];
+            //}
+            //for (int i = t.Length - nb; i < t.Length; i++)
+            //{
+            //    tt[i] = t[i - (t.Length - nb)];
+            //}
+
+            //foreach (var elem in t)
+            //{
+            //    Console.Write(elem);
+            //}
+            //Console.WriteLine();
+            //foreach (var elem in tt)
+            //{
+            //    Console.Write(elem);
+            //}
+
+            //Exercice 9
+
+            //int[] t = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //int temp;
+            //int n = 2;
+
+
+            //do
+            //{
+
+            //    temp = t[t.Length - 1];
+            //    for (int i = t.Length - 1; i > 0; i--)
+            //    {
+            //        t[i] = t[i - 1];
+            //    }
+            //    t[0] = temp;
+            //    n--;
+            //} while (n > 0);
+
+
+
+            //foreach (var elem in t)
+            //{
+            //    Console.Write(elem);
+            //}
+            //Console.WriteLine();
+
+
+            //Exercice 10
+
+            //int[] T = new int[10];
+            //int temp;
+            //for (int i = 0; i < T.Length; i++)
+            //{
+            //    T[i] = i + 1;
+            //}
+
+            //for (int i = 0; i < T.Length/2; i++)
+            //{
+            //    temp=T[i];
+            //    T[i] = T[(T.Length-1)-i];
+            //    T[(T.Length - 1) - i] =temp;
+            //}
+
+            //foreach (var elem in T)
+            //{
+            //    Console.Write(elem);
+            //}
+
+            //Exercice 11
+
+            //int[] T = new int[20];
+            //for (int i=0;i<T.Length;i++)
+            //{
+            //    T[i] = (i * i) % 17;
+            //}
+            //foreach (var elem in T)
+            //{
+            //    Console.WriteLine(elem);
+            //}
+
+            //Exercice 12
+
+            //int[] T = new int[20];
+
+            //for (int i = 0; i < T.Length; i++)
+            //{
+            //    T[i] = (i * i) % 17;
+            //}
+
+            //int min = T[0];
+            //int max = T[0];
+            //for (int i = 0; i < T.Length; i++)
+            //{
+            //    if (min > T[i])
+            //    {
+            //        min = T[i];
+            //    }
+            //    if (max < T[i])
+            //    {
+            //        max = T[i];
+            //    }
+            //}
+            //foreach (var elem in T)
+            //{
+            //    Console.WriteLine(elem);
+            //}
+            //Console.WriteLine("max : " + max + " min : " + min);
+
+            //Exercice 13
+
+            //int[] T = new int[20];
+
+            //for (int i = 0; i < T.Length; i++)
+            //{
+            //    T[i] = (i * i) % 17;
+            //}
+            //Console.WriteLine("Donnez une valeur");
+            //int x = int.Parse(Console.ReadLine());
+            //for (int i = 0; i < T.Length; i++)
+            //{
+            //    if (T[i]==x)
+            //    {
+            //        Console.WriteLine(x +" se trouve en indice : "+i+" du tableau");
+            //    }
+            //}
+            //foreach (var elem in T)
+            //{
+            //    Console.WriteLine(elem);
+            //}
+
+            //Exercice 14
+
+            //int[] T = new int[20];
+            //int[] Q = new int[20];
+            //int indice = 0;
+            //for (int i = 0; i < T.Length; i++)
+            //{
+            //    T[i] = (i * i) % 17;
+            //}
+            //Console.WriteLine("Donnez une valeur");
+            //int x = int.Parse(Console.ReadLine());
+            //for (int i = 0; i < T.Length; i++)
+            //{
+            //    if (T[i] == x)
+            //    {
+            //        Q[indice]= i;
+            //        indice++;
+            //    }
+            //}
+            //Array.Resize(ref Q, indice);
+            //if (Q.Length>0)
+            //{
+            //    foreach (var elem in Q)
+            //    {
+            //        Console.WriteLine(x + " se trouve en indice : " + elem + " du tableau");
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine(x + " ne se trouve pas dans le tableau");
+            //}
+
+            //Exercice 16
+
+
+            int[] T = new int[20];
+            Random rnd = new Random();
+            for (int i = 0; i < T.Length; i++)
+            {
+                T[i] = rnd.Next(-20,20);
+            }
+            int tranche=3;
+            int sommeTranche=0;
+            for (int j = 0; j < tranche; j++)
+            {
+                sommeTranche += T[j];
+            }
+            int minTranche=sommeTranche;
+            sommeTranche = 0;
+            for (int i=0;i<T.Length-1-tranche;i++)
+            {
+                for (int j = 0; j < tranche; j++)
+                {
+                    sommeTranche += T[i + j];
+                }
+                if (sommeTranche<minTranche)
+                {
+                    minTranche = sommeTranche;
+                }
+                sommeTranche = 0;
+            }
+
+            Console.WriteLine("La tranche minimal est : "+minTranche);
+
+            foreach (var elem in T)
+            {
+                Console.WriteLine(elem);
+            }
         }
     }
 }
