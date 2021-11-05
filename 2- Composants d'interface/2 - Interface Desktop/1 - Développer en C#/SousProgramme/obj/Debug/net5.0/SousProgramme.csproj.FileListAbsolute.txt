@@ -1,0 +1,16 @@
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\bin\Debug\net5.0\SousProgramme.exe
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\bin\Debug\net5.0\SousProgramme.deps.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\bin\Debug\net5.0\SousProgramme.runtimeconfig.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\bin\Debug\net5.0\SousProgramme.runtimeconfig.dev.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\bin\Debug\net5.0\SousProgramme.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\bin\Debug\net5.0\ref\SousProgramme.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\bin\Debug\net5.0\SousProgramme.pdb
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\obj\Debug\net5.0\SousProgramme.csproj.AssemblyReference.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\obj\Debug\net5.0\SousProgramme.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\obj\Debug\net5.0\SousProgramme.AssemblyInfoInputs.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\obj\Debug\net5.0\SousProgramme.AssemblyInfo.cs
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\obj\Debug\net5.0\SousProgramme.csproj.CoreCompileInputs.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\obj\Debug\net5.0\SousProgramme.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\obj\Debug\net5.0\ref\SousProgramme.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\obj\Debug\net5.0\SousProgramme.pdb
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\SousProgramme\obj\Debug\net5.0\SousProgramme.genruntimeconfig.cache
