@@ -30,7 +30,7 @@ namespace ClasseCompte
 
         public string Afficher()
         {
-            return "CIN : " + this.CIN + " nom : " + this.Nom + " prenom : " + this.Prenom + " tel : " + this.Tel;
+            return "CIN : " + this.CIN + "\nnom : " + this.Nom + "\nprenom : " + this.Prenom + "\ntel : " + this.Tel;
         }
     }
 }

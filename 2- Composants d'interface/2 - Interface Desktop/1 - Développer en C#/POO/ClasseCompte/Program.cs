@@ -8,9 +8,15 @@ namespace ClasseCompte
         {
             Clients client = new Clients("fjaozeifha0","Dupont","Toto","546584");
             Comptes compte = new Comptes(10000,client) ;
-            Console.WriteLine(compte.CodeCompte);
             Comptes compte2 = new Comptes(100010, client);
-            Console.WriteLine(compte2.CodeCompte);
+            compte2.Crediter(100,compte);
+            Console.WriteLine(compte2.getSolde());
+            Console.WriteLine(compte.getSolde());
+            compte2.Debiter(100,compte);
+            Console.WriteLine(compte2.getSolde());
+            Console.WriteLine(compte.getSolde());
+            Console.WriteLine(compte.ToString());
+            Console.WriteLine(Comptes.NbComptes());
         }
     }
 }
