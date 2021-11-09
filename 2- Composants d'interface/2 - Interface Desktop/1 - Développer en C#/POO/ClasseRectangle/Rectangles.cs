@@ -21,7 +21,7 @@ namespace ClasseRectangle
             Largeur = largeur;
         }
 
-        public double Perimetre()
+        public virtual double Perimetre()
         {
             return (this.Largeur+this.Longueur)*2;
         }
@@ -40,9 +40,9 @@ namespace ClasseRectangle
             return false;
         }
 
-        public string Afficher()
+        public string AfficherRectangle()
         {
-            return "Longeur : "+this.Longueur+" - Largeur : "+this.Largeur+" - Périmètre : "+this.Perimetre();
+            return "Longeur : "+this.Longueur+" - Largeur : "+this.Largeur+" - Périmètre : "+this.Perimetre()+" - Aire : "+this.Aire()+" - "+(this.EstCarre()?"Il s'agit d'un carré": "Il ne s’agit pas d’un carré");
         }
     }
 }
