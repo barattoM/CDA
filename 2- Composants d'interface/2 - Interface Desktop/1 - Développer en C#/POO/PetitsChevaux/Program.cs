@@ -45,7 +45,7 @@ namespace PetitsChevaux
                     couleurJoueur = Console.ReadLine().ToLower();
                 } while (!Array.Exists(tableauCouleur, elm => elm == couleurJoueur));
 
-                listeJoueur.Add(new Joueurs(nomJoueur, couleurJoueur));
+                //listeJoueur.Add(new Joueurs(nomJoueur, couleurJoueur));
 
             }
             
