@@ -19,12 +19,17 @@ namespace ClasseRectangle
 
         public override double Perimetre()
         {
-            return 4 * this.Hauteur + 4 * this.Longueur * 4 * this.Largeur;
+            return 2*base.Perimetre() +4 * this.Hauteur;
         }
 
         public double Volume()
         {
-            return 
+            return base.Aire()+this.Hauteur;
+        }
+
+        public string Afficher()
+        {
+            return "Périmetre : "+this.Perimetre()+" - Volume : "+this.Volume();
         }
     }
 }

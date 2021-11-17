@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "U:\\59011-07-02\\CDA\\2- Composants d'interface\\2 - Interface Desktop\\1 - Développer en C#\\POO\\ClasseRectangle\\ClasseRectangle.csproj": {}
+    "U:\\59011-07-02\\CDA\\2- Composants d'interface\\2 - Interface Desktop\\1 - C#\\POO\\ClasseRectangle\\ClasseRectangle.csproj": {}
   },
   "projects": {
-    "U:\\59011-07-02\\CDA\\2- Composants d'interface\\2 - Interface Desktop\\1 - Développer en C#\\POO\\ClasseRectangle\\ClasseRectangle.csproj": {
+    "U:\\59011-07-02\\CDA\\2- Composants d'interface\\2 - Interface Desktop\\1 - C#\\POO\\ClasseRectangle\\ClasseRectangle.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "U:\\59011-07-02\\CDA\\2- Composants d'interface\\2 - Interface Desktop\\1 - Développer en C#\\POO\\ClasseRectangle\\ClasseRectangle.csproj",
+        "projectUniqueName": "U:\\59011-07-02\\CDA\\2- Composants d'interface\\2 - Interface Desktop\\1 - C#\\POO\\ClasseRectangle\\ClasseRectangle.csproj",
         "projectName": "ClasseRectangle",
-        "projectPath": "U:\\59011-07-02\\CDA\\2- Composants d'interface\\2 - Interface Desktop\\1 - Développer en C#\\POO\\ClasseRectangle\\ClasseRectangle.csproj",
+        "projectPath": "U:\\59011-07-02\\CDA\\2- Composants d'interface\\2 - Interface Desktop\\1 - C#\\POO\\ClasseRectangle\\ClasseRectangle.csproj",
         "packagesPath": "C:\\Users\\59011-07-02\\.nuget\\packages\\",
-        "outputPath": "U:\\59011-07-02\\CDA\\2- Composants d'interface\\2 - Interface Desktop\\1 - Développer en C#\\POO\\ClasseRectangle\\obj\\",
+        "outputPath": "U:\\59011-07-02\\CDA\\2- Composants d'interface\\2 - Interface Desktop\\1 - C#\\POO\\ClasseRectangle\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

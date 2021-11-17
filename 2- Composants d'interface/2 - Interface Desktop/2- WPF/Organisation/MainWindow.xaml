@@ -362,7 +362,9 @@
                         <RowDefinition Height="378*"/>
                         <RowDefinition Height="8*"/>
                     </Grid.RowDefinitions>
-                    <Grid Grid.Column="1" Grid.Row="1"/>
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        
+                    </Grid>
 
                 </Grid>
             </TabItem>

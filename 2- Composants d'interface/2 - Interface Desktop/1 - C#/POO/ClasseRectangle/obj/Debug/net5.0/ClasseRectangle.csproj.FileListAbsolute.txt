@@ -14,3 +14,19 @@ U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développ
 U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseRectangle\obj\Debug\net5.0\ref\ClasseRectangle.dll
 U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseRectangle\obj\Debug\net5.0\ClasseRectangle.pdb
 U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseRectangle\obj\Debug\net5.0\ClasseRectangle.genruntimeconfig.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\bin\Debug\net5.0\ClasseRectangle.exe
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\bin\Debug\net5.0\ClasseRectangle.deps.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\bin\Debug\net5.0\ClasseRectangle.runtimeconfig.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\bin\Debug\net5.0\ClasseRectangle.runtimeconfig.dev.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\bin\Debug\net5.0\ClasseRectangle.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\bin\Debug\net5.0\ref\ClasseRectangle.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\bin\Debug\net5.0\ClasseRectangle.pdb
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\obj\Debug\net5.0\ClasseRectangle.csproj.AssemblyReference.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\obj\Debug\net5.0\ClasseRectangle.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\obj\Debug\net5.0\ClasseRectangle.AssemblyInfoInputs.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\obj\Debug\net5.0\ClasseRectangle.AssemblyInfo.cs
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\obj\Debug\net5.0\ClasseRectangle.csproj.CoreCompileInputs.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\obj\Debug\net5.0\ClasseRectangle.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\obj\Debug\net5.0\ref\ClasseRectangle.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\obj\Debug\net5.0\ClasseRectangle.pdb
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - C#\POO\ClasseRectangle\obj\Debug\net5.0\ClasseRectangle.genruntimeconfig.cache

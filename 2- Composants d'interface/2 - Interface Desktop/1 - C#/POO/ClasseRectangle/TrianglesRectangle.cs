@@ -22,7 +22,7 @@ namespace ClasseRectangle
             Hauteur = hauteur;
         }
 
-        public double Perimetre()
+        public virtual double Perimetre()
         {
             return this.Base + this.Hauteur + Math.Sqrt(this.Base * this.Base + this.Hauteur * this.Hauteur);
         }
