@@ -1,0 +1,38 @@
+[
+  {
+    "IdProduit": 1,
+    "Libelle": "Produit1",
+    "Categorie": "Catégorie 1",
+    "Rayon": 2
+  },
+  {
+    "IdProduit": 1,
+    "Libelle": "Produit2",
+    "Categorie": "Catégorie 2",
+    "Rayon": 3
+  },
+  {
+    "IdProduit": 54,
+    "Libelle": "cefg",
+    "Categorie": "fe",
+    "Rayon": 2
+  },
+  {
+    "IdProduit": 56,
+    "Libelle": "fnft",
+    "Categorie": "sg",
+    "Rayon": 4
+  },
+  {
+    "IdProduit": 45,
+    "Libelle": "fezfz",
+    "Categorie": "fezfz",
+    "Rayon": 5
+  },
+  {
+    "IdProduit": 453,
+    "Libelle": "gregzr",
+    "Categorie": "gzegzeg",
+    "Rayon": 4
+  }
+]

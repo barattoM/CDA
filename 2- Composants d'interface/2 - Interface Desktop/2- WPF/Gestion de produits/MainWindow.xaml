@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Gestion_de_produits"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#FFC4C996">
+    <Grid Background="{DynamicResource BackgroundWindow}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="117*"/>
             <ColumnDefinition Width="538*"/>
@@ -32,14 +32,14 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="20*"/>
             </Grid.ColumnDefinitions>
-            <Button Content="Ajouter" Grid.Column="0" Grid.Row="0" Background="{DynamicResource BackgroundButton}"/>
-            <Button Content="Modifier" Grid.Column="2" Grid.Row="0" Background="{DynamicResource BackgroundButton}"/>
-            <Button Content="Supprimer" Grid.Column="4" Grid.Row="0" Background="{DynamicResource BackgroundButton}"/>
+            <Button x:Name="btnAjouter"  Content="Ajouter" Grid.Column="0" Grid.Row="0" Background="{DynamicResource BackgroundButton}" Click="btnActions_Click"/>
+            <Button x:Name="btnModifier" Content="Modifier" Grid.Column="2" Grid.Row="0" Background="{DynamicResource BackgroundButton}" Click="btnActions_Click"/>
+            <Button x:Name="btnSupprimer" Content="Supprimer" Grid.Column="4" Grid.Row="0" Background="{DynamicResource BackgroundButton}" Click="btnActions_Click"/>
             <Button Content="Duppliquer" Grid.Column="6" Grid.Row="0" Background="{DynamicResource BackgroundButton}"/>
             <Button Content="Vider" Grid.Column="8" Grid.Row="0" Background="{DynamicResource BackgroundButton}"/>
         </Grid>
 
-        <DataGrid Grid.Column="1" Grid.Row="2" VerticalScrollBarVisibility="Visible" >
+        <DataGrid x:Name="dataProduit" Grid.Column="1" Grid.Row="2" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False" >
             <DataGrid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF151515" Offset="0"/>
@@ -48,10 +48,10 @@
                 </LinearGradientBrush>
             </DataGrid.Background>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="IdProduit" Width="2*"/>
-                <DataGridTextColumn Header="LibelleProduit" Width="7*" />
-                <DataGridTextColumn Header="Catégories" Width="3*"/>
-                <DataGridTextColumn Header="Rayons" Width="3*" />
+                <DataGridTextColumn Header="IdProduit" Binding="{Binding IdProduit}" Width="2*"/>
+                <DataGridTextColumn Header="LibelleProduit" Binding="{Binding Libelle}" Width="7*" />
+                <DataGridTextColumn Header="Catégories" Binding="{Binding Categorie}" Width="3*"/>
+                <DataGridTextColumn Header="Rayons" Binding="{Binding Rayon}" Width="3*" />
             </DataGrid.Columns>
         </DataGrid>
 

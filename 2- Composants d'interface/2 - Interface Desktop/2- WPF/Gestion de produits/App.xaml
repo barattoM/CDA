@@ -10,6 +10,7 @@
             <GradientStop Color="#FF26FFF6" Offset="1"/>
             <GradientStop Color="#FFE2F0A3" Offset="0.5"/>
         </LinearGradientBrush>
+        <SolidColorBrush x:Key="BackgroundWindow" Color="#FFC4C996"/>
 
     </Application.Resources>
 </Application>
