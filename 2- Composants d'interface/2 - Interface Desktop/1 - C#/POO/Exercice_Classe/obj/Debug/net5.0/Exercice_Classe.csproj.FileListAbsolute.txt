@@ -1,0 +1,16 @@
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\bin\Debug\net5.0\Exercice_Classe.exe
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\bin\Debug\net5.0\Exercice_Classe.deps.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\bin\Debug\net5.0\Exercice_Classe.runtimeconfig.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\bin\Debug\net5.0\Exercice_Classe.runtimeconfig.dev.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\bin\Debug\net5.0\Exercice_Classe.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\bin\Debug\net5.0\ref\Exercice_Classe.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\bin\Debug\net5.0\Exercice_Classe.pdb
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\obj\Debug\net5.0\Exercice_Classe.csproj.AssemblyReference.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\obj\Debug\net5.0\Exercice_Classe.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\obj\Debug\net5.0\Exercice_Classe.AssemblyInfoInputs.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\obj\Debug\net5.0\Exercice_Classe.AssemblyInfo.cs
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\obj\Debug\net5.0\Exercice_Classe.csproj.CoreCompileInputs.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\obj\Debug\net5.0\Exercice_Classe.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\obj\Debug\net5.0\ref\Exercice_Classe.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\obj\Debug\net5.0\Exercice_Classe.pdb
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\Exercice_Classe\obj\Debug\net5.0\Exercice_Classe.genruntimeconfig.cache

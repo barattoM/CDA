@@ -1,0 +1,16 @@
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\bin\Debug\net5.0\ClasseCompte.exe
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\bin\Debug\net5.0\ClasseCompte.deps.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\bin\Debug\net5.0\ClasseCompte.runtimeconfig.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\bin\Debug\net5.0\ClasseCompte.runtimeconfig.dev.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\bin\Debug\net5.0\ClasseCompte.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\bin\Debug\net5.0\ref\ClasseCompte.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\bin\Debug\net5.0\ClasseCompte.pdb
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\obj\Debug\net5.0\ClasseCompte.csproj.AssemblyReference.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\obj\Debug\net5.0\ClasseCompte.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\obj\Debug\net5.0\ClasseCompte.AssemblyInfoInputs.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\obj\Debug\net5.0\ClasseCompte.AssemblyInfo.cs
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\obj\Debug\net5.0\ClasseCompte.csproj.CoreCompileInputs.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\obj\Debug\net5.0\ClasseCompte.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\obj\Debug\net5.0\ref\ClasseCompte.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\obj\Debug\net5.0\ClasseCompte.pdb
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\ClasseCompte\obj\Debug\net5.0\ClasseCompte.genruntimeconfig.cache

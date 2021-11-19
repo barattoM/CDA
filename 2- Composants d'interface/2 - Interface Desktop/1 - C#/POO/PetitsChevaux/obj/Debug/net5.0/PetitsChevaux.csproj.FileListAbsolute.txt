@@ -1,0 +1,16 @@
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\bin\Debug\net5.0\PetitsChevaux.exe
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\bin\Debug\net5.0\PetitsChevaux.deps.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\bin\Debug\net5.0\PetitsChevaux.runtimeconfig.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\bin\Debug\net5.0\PetitsChevaux.runtimeconfig.dev.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\bin\Debug\net5.0\PetitsChevaux.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\bin\Debug\net5.0\ref\PetitsChevaux.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\bin\Debug\net5.0\PetitsChevaux.pdb
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\obj\Debug\net5.0\PetitsChevaux.csproj.AssemblyReference.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\obj\Debug\net5.0\PetitsChevaux.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\obj\Debug\net5.0\PetitsChevaux.AssemblyInfoInputs.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\obj\Debug\net5.0\PetitsChevaux.AssemblyInfo.cs
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\obj\Debug\net5.0\PetitsChevaux.csproj.CoreCompileInputs.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\obj\Debug\net5.0\PetitsChevaux.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\obj\Debug\net5.0\ref\PetitsChevaux.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\obj\Debug\net5.0\PetitsChevaux.pdb
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\POO\PetitsChevaux\obj\Debug\net5.0\PetitsChevaux.genruntimeconfig.cache

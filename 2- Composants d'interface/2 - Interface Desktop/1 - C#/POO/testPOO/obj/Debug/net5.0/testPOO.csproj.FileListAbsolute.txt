@@ -1,0 +1,16 @@
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\bin\Debug\net5.0\testPOO.exe
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\bin\Debug\net5.0\testPOO.deps.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\bin\Debug\net5.0\testPOO.runtimeconfig.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\bin\Debug\net5.0\testPOO.runtimeconfig.dev.json
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\bin\Debug\net5.0\testPOO.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\bin\Debug\net5.0\ref\testPOO.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\bin\Debug\net5.0\testPOO.pdb
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\obj\Debug\net5.0\testPOO.csproj.AssemblyReference.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\obj\Debug\net5.0\testPOO.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\obj\Debug\net5.0\testPOO.AssemblyInfoInputs.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\obj\Debug\net5.0\testPOO.AssemblyInfo.cs
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\obj\Debug\net5.0\testPOO.csproj.CoreCompileInputs.cache
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\obj\Debug\net5.0\testPOO.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\obj\Debug\net5.0\ref\testPOO.dll
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\obj\Debug\net5.0\testPOO.pdb
+U:\59011-07-02\CDA\2- Composants d'interface\2 - Interface Desktop\1 - Développer en C#\testPOO\obj\Debug\net5.0\testPOO.genruntimeconfig.cache
