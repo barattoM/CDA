@@ -1,0 +1,15 @@
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\bin\Debug\Maquettage.exe.config
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\bin\Debug\Maquettage.exe
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\bin\Debug\Maquettage.pdb
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\obj\Debug\Maquettage.csproj.AssemblyReference.cache
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\obj\Debug\MainWindow.g.cs
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\obj\Debug\App.g.cs
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\obj\Debug\Maquettage_MarkupCompile.cache
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\obj\Debug\Maquettage_MarkupCompile.lref
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\obj\Debug\MainWindow.baml
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\obj\Debug\Maquettage.g.resources
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\obj\Debug\Maquettage.Properties.Resources.resources
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\obj\Debug\Maquettage.csproj.GenerateResource.cache
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\obj\Debug\Maquettage.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\obj\Debug\Maquettage.exe
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\1 - C#\Maquettage\Maquettage\obj\Debug\Maquettage.pdb
