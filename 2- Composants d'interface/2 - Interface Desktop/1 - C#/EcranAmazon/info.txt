@@ -1,0 +1,36 @@
+Livraison
+Expéditeur : ComboBox
+Vendeur : ComboBox
+Quantité : TextBox
+
+Mot clés
+Mots clés : ComboBox
+
+Info Ecran
+Nom de l'écran : TextBox
+Marque : ComboBox
+Prix : TextBox
+Usages spécifiques pour le produit : ComboBox
+Couleur : ComboBox
+Séries : ComboBox
+Description du produit : TextBlock
+Date de mise en ligne : DatePicker
+Interface matérielle : ComboBox
+Type de connecteur : ComboBox
+Images : Bouton(ajouter/supprimer) + dataGrid
+
+Dimension
+Rapport hauteur/largeur : ComboBox
+Dimension de l'écran : TextBox ( .. X .. X .. cm)
+Angle de vue réel : TextBox
+Taille de l'écran : TextBox
+
+Affichage
+Luminosité de l'écran : TextBox
+Contraste de l'image : TextBox
+Temps de réponse : TextBox
+Technologie d'affichage : ComboBox
+Résolution : ComboBox
+Resolution native : ComboBox
+Resolution d'affichage maximale : ComboBox
+Fréquence de rafraichissement : TextBox

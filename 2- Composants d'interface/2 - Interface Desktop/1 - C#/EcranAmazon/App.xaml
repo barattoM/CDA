@@ -1,0 +1,13 @@
+﻿<Application x:Class="EcranAmazon.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:EcranAmazon"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <SolidColorBrush x:Key="Bouton" Color="#FFFFD814"/>
+        <SolidColorBrush x:Key="Bouton2" Color="#FFFFA41C"/>
+        <SolidColorBrush x:Key="TitreGroupBox" Color="#FF007185"/>
+
+    </Application.Resources>
+</Application>
