@@ -42,12 +42,14 @@ namespace TestVoiture.Data.Services
 
         public Voiture GetVoitureById(int id)
         {
-            return _context.Voitures.FirstOrDefault(v=>v.Id==id);
+            return _context.Voitures.FirstOrDefault(v => v.IdVoiture == id);
         }
 
         public void UpdateVoiture(Voiture v)
         {
             _context.SaveChanges();
         }
+
+
     }
 }

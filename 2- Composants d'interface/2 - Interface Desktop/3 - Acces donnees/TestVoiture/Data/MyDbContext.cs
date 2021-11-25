@@ -10,6 +10,7 @@ namespace TestVoiture.Data
     public class MyDbContext:DbContext
     {
         public DbSet<Voiture> Voitures { get; set; }
+        public DbSet<Personne> Personnes { get; set; }
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
         {
 

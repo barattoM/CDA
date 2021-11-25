@@ -32,6 +32,7 @@ namespace TestVoiture
             services.AddDbContext<MyDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("Default")));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddTransient<VoituresServices>();
+            services.AddTransient<PersonnesServices>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

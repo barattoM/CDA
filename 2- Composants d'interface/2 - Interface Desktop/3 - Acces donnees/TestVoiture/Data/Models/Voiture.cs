@@ -9,8 +9,9 @@ namespace TestVoiture.Data.Models
     public partial class Voiture
     {
         [Key]
-        public int Id { get; set; }
+        public int IdVoiture { get; set; }
         public string Marque { get; set; }
         public string Modele { get; set; }
+
     }
 }

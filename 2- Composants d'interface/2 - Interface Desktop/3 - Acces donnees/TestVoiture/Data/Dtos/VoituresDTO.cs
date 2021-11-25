@@ -9,5 +9,6 @@ namespace TestVoiture.Data.Dtos
     {
         public string Marque { get; set; }
         public string Modele { get; set; }
+        
     }
 }
