@@ -47,10 +47,10 @@ namespace TestVoiture.Controllers
 
         //POST api/Personnes
         [HttpPost]
-        public ActionResult<PersonnesDTO> CreatePersonne(Personne obj)
+        public ActionResult CreatePersonne(PersonnesDTOIn obj)
         {
             _service.AddPersonne(obj);
-            return CreatedAtRoute(nameof(GetPersonneById), new { Id = obj.Id }, obj);
+            return NoContent();
         }
 
         //POST api/Personnes/{id}

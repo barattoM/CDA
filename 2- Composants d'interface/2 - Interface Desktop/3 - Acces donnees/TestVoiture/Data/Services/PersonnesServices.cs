@@ -17,13 +17,19 @@ namespace TestVoiture.Data.Services
             _context = context;
         }
 
-        public void AddPersonne(Personne obj)
+        public void AddPersonne(PersonnesDTOIn obj)
         {
             if (obj == null)
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.Personnes.Add(obj);
+            var n = new Personne
+            {
+                Nom = obj.Nom,
+                Prenom = obj.Prenom,
+                IdVoiture = obj.IdVoiture,
+            };
+            _context.Personnes.Add(n);
             _context.SaveChanges();
         }
 
@@ -38,19 +44,10 @@ namespace TestVoiture.Data.Services
         }
 
         public IEnumerable<Personne> GetAllPersonnes()
-        {
-            //      return _context.Personnes.ToList();
-            //            IEnumerable<Personne> liste = _context.Personnes.Select(pers => new Personne()
-            //            {
-            //                Id = pers.Id,
-            //                Nom = pers.Nom,
-            //                Prenom = pers.Prenom,
-            //                IdVoiture = pers.IdVoiture,
-            ////                LaVoiture = pers.LaVoiture,
-            //                }).ToList();
+        { 
             IEnumerable<Personne> liste= (from e1 in _context.Personnes
                                           join e2 in _context.Voitures
-                                          on new { e1.IdVoiture } equals new { e2.IdVoiture }
+                                          on e1.IdVoiture equals e2.IdVoiture
                                           select new Personne
                                           {
                                               Id = e1.Id,
@@ -64,11 +61,24 @@ namespace TestVoiture.Data.Services
 
         public Personne GetPersonneById(int id)
         {
-            return _context.Personnes.FirstOrDefault(obj => obj.Id == id);
+            var n=from e1 in _context.Personnes
+                join e2 in _context.Voitures
+                on e1.IdVoiture equals e2.IdVoiture
+                where e1.Id == id
+                select new Personne
+                {
+                    Id = e1.Id,
+                    Nom = e1.Nom,
+                    Prenom = e1.Prenom,
+                    IdVoiture = e2.IdVoiture,
+                    LaVoiture = e2
+                };
+            return n.FirstOrDefault();
         }
 
         public void UpdatePersonne(Personne obj)
         {
+            
             _context.SaveChanges();
         }
 

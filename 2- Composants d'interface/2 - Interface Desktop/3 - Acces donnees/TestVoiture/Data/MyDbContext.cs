@@ -15,5 +15,20 @@ namespace TestVoiture.Data
         {
 
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Voiture>(e2 =>
+            {
+                e2.ToTable("Voitures");
+                e2.Property(e => e.IdVoiture).HasColumnName("IdVoiture");
+            });
+            modelBuilder.Entity<Personne>(e1 =>
+            {
+                e1.ToTable("Personnes");
+                e1.Property(e => e.IdVoiture).HasColumnName("IdVoiture");
+                e1.HasOne(e => e.LaVoiture).WithOne().HasForeignKey<Voiture>(e => e.IdVoiture);
+            });
+        }
     }
 }

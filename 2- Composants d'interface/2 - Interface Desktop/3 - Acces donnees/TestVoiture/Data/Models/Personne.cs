@@ -13,6 +13,6 @@ namespace TestVoiture.Data.Models
         public string Nom { get; set; }
         public string Prenom { get; set; }
         public int IdVoiture { get; set; }
-        public Voiture LaVoiture { get; set; }
+        public Voiture? LaVoiture { get; set; }
     }
 }
