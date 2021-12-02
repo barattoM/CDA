@@ -26,7 +26,7 @@ namespace GestionStock.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user=root;database=GestionStock;port=3306;ssl mode=none")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user=root;database=gestionStocks;port=3306;ssl mode=none")]
         public string ChaineConnexion {
             get {
                 return ((string)(this["ChaineConnexion"]));

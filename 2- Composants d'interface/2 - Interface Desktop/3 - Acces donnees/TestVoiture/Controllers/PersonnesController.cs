@@ -27,20 +27,20 @@ namespace TestVoiture.Controllers
 
         //GET api/Personnes
         [HttpGet]
-        public ActionResult<IEnumerable<PersonnesDTO>> GetAllPersonnes()
+        public ActionResult<IEnumerable<PersonnesDTOAvecVoiture>> GetAllPersonnes()
         {
             IEnumerable < Personne > listePersonnes = _service.GetAllPersonnes();
-            return Ok(_mapper.Map<IEnumerable<PersonnesDTO>>(listePersonnes));
+            return Ok(_mapper.Map<IEnumerable<PersonnesDTOAvecVoiture>>(listePersonnes));
         }
 
         //GET api/Personnes/{i}
         [HttpGet("{id}", Name = "GetPersonneById")]
-        public ActionResult<PersonnesDTO> GetPersonneById(int id)
+        public ActionResult<PersonnesDTOAvecVoiture> GetPersonneById(int id)
         {
             Personne commandItem = _service.GetPersonneById(id);
             if (commandItem != null)
             {
-                return Ok(_mapper.Map<PersonnesDTO>(commandItem));
+                return Ok(_mapper.Map<PersonnesDTOAvecVoiture>(commandItem));
             }
             return NotFound();
         }
@@ -49,13 +49,13 @@ namespace TestVoiture.Controllers
         [HttpPost]
         public ActionResult CreatePersonne(PersonnesDTOIn obj)
         {
-            _service.AddPersonne(obj);
+            _service.AddPersonne(_mapper.Map<Personne>(obj));
             return NoContent();
         }
 
         //POST api/Personnes/{id}
         [HttpPut("{id}")]
-        public ActionResult UpdatePersonne(int id, Personne obj)
+        public ActionResult UpdatePersonne(int id, PersonnesDTOIn obj)
         {
             Personne objFromRepo = _service.GetPersonneById(id);
             if (objFromRepo == null)

@@ -57,15 +57,16 @@
 
         //POST api/$TagName$
         [HttpPost]
-        public ActionResult<$TagName$DTO> Create$className$($className$ obj)
+        public ActionResult<$TagName$DTO> Create$className$($TagName$DTOIn objIn)
         {
+            $className$ obj = _mapper.Map<$className$>(objIn);
             _service.Add$className$(obj);
-            return CreatedAtRoute(nameof(Get$className$ById), new { Id = obj.Id }, obj);
+            return CreatedAtRoute(nameof(Get$className$ById), new { Id = obj.Id$className$ }, obj);
         }
 
         //POST api/$TagName$/{id}
         [HttpPut("{id}")]
-        public ActionResult Update$className$(int id, $TagName$DTO obj)
+        public ActionResult Update$className$(int id, $TagName$DTOIn obj)
         {
             $className$ objFromRepo = _service.Get$className$ById(id);
             if (objFromRepo==null)

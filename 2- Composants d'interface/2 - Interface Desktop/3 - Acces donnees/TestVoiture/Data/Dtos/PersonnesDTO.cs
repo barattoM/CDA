@@ -10,7 +10,22 @@ namespace TestVoiture.Data.Dtos
     {
         public string Nom { get; set; }
         public string Prenom { get; set; }
-        public VoituresDTO LaVoiture { get; set; }
-        
     }
+
+    public class PersonnesDTOAvecVoiture
+    {
+        public string Nom { get; set; }
+        public string Prenom { get; set; }
+
+        public VoituresDTO LaVoiture { get; set; }
+    }
+
+    public class PersonnesDTOIn
+    {
+        public string Nom { get; set; }
+        public string Prenom { get; set; }
+        public int IdVoiture { get; set; }
+    }
+
+
 }

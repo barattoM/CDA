@@ -12,6 +12,6 @@ namespace TestVoiture.Data.Models
         public int IdVoiture { get; set; }
         public string Marque { get; set; }
         public string Modele { get; set; }
-
+        public ICollection<Personne> LesPersonnes { get; set; }
     }
 }

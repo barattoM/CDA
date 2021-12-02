@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,19 +18,13 @@ namespace TestVoiture.Data.Services
             _context = context;
         }
 
-        public void AddPersonne(PersonnesDTOIn obj)
+        public void AddPersonne(Personne obj)
         {
             if (obj == null)
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            var n = new Personne
-            {
-                Nom = obj.Nom,
-                Prenom = obj.Prenom,
-                IdVoiture = obj.IdVoiture,
-            };
-            _context.Personnes.Add(n);
+            _context.Personnes.Add(obj);
             _context.SaveChanges();
         }
 
@@ -45,35 +40,35 @@ namespace TestVoiture.Data.Services
 
         public IEnumerable<Personne> GetAllPersonnes()
         { 
-            IEnumerable<Personne> liste= (from e1 in _context.Personnes
-                                          join e2 in _context.Voitures
-                                          on e1.IdVoiture equals e2.IdVoiture
-                                          select new Personne
-                                          {
-                                              Id = e1.Id,
-                                              Nom = e1.Nom,
-                                              Prenom= e1.Prenom,
-                                              IdVoiture = e2.IdVoiture,
-                                              LaVoiture = e2
-                                          }).ToList();
-            return liste;
+            //IEnumerable<Personne> liste= (from e1 in _context.Personnes
+            //                              join e2 in _context.Voitures
+            //                              on e1.IdVoiture equals e2.IdVoiture
+            //                              select new Personne
+            //                              {
+            //                                  Id = e1.Id,
+            //                                  Nom = e1.Nom,
+            //                                  Prenom= e1.Prenom,
+            //                                  IdVoiture = e2.IdVoiture,
+            //                                  LaVoiture = e2
+            //                              }).ToList();
+            return _context.Personnes.Include("LaVoiture").ToList();
         }
 
         public Personne GetPersonneById(int id)
         {
-            var n=from e1 in _context.Personnes
-                join e2 in _context.Voitures
-                on e1.IdVoiture equals e2.IdVoiture
-                where e1.Id == id
-                select new Personne
-                {
-                    Id = e1.Id,
-                    Nom = e1.Nom,
-                    Prenom = e1.Prenom,
-                    IdVoiture = e2.IdVoiture,
-                    LaVoiture = e2
-                };
-            return n.FirstOrDefault();
+            //var n=from e1 in _context.Personnes
+            //    join e2 in _context.Voitures
+            //    on e1.IdVoiture equals e2.IdVoiture
+            //    where e1.Id == id
+            //    select new Personne
+            //    {
+            //        Id = e1.Id,
+            //        Nom = e1.Nom,
+            //        Prenom = e1.Prenom,
+            //        IdVoiture = e2.IdVoiture,
+            //        LaVoiture = e2
+            //    };
+            return _context.Personnes.Include("LaVoiture").FirstOrDefault(obj => obj.Id==id);
         }
 
         public void UpdatePersonne(Personne obj)

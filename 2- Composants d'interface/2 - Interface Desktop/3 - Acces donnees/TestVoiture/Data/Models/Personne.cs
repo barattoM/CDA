@@ -15,4 +15,5 @@ namespace TestVoiture.Data.Models
         public int IdVoiture { get; set; }
         public Voiture? LaVoiture { get; set; }
     }
+
 }

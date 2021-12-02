@@ -16,6 +16,8 @@ namespace TestVoiture.Data.Profiles
             CreateMap<PersonnesDTO, Personne>();
             CreateMap<Personne, PersonnesDTOIn>();
             CreateMap<PersonnesDTOIn, Personne>();
+            CreateMap<Personne, PersonnesDTOAvecVoiture>();
+            CreateMap<PersonnesDTOAvecVoiture, Personne>();
         }
     }
 }
