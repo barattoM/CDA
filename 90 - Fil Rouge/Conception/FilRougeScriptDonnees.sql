@@ -31,7 +31,7 @@ INSERT INTO `villes` (`IdVille`, `libelleVIlle`, `codePostal`, `IdPays`) VALUES
 (3, 'Mogadiscio', '6369', 4),
 (4, 'Brussel', '5269', 3);
 
-INSERT INTO `adresses` (`IdAdresse`, `emailAdresse`, `telMobile`, `telFixe`, `adresse`, `province`, `complementAdresse`, `IdVille`) VALUES
+INSERT INTO `adresses` (`IdAdresse`, `emailAdresse`, `telMobile`, `telFixe`, `adressePostale`, `province`, `complementAdresse`, `IdVille`) VALUES
 (1, 'Maxance@Bootstrap.com', '0602030203', '0328569569', '58 rue de l\'afpa ', 'Nord', '59240 dunkerque', 1),
 (2, 'Martine.Poix@Afpa.fr', '06080502', '0328569565', '96 rue de l\'eglise ', 'Nord', '59380 socx', 1);
 

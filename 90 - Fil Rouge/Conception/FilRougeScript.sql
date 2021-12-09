@@ -11,7 +11,7 @@ USE FilRougeBdd;
 CREATE TABLE Rubriques(
    IdRubrique INT AUTO_INCREMENT PRIMARY KEY,
    libelleRubrique VARCHAR(150)  NOT NULL,
-   IdRubriqueMere INT NOT NULL
+   IdRubriqueMere INT 
 )ENGINE=InnoDB;
 
 
@@ -134,7 +134,7 @@ CREATE TABLE Adresses(
    emailAdresse VARCHAR(150)  NOT NULL,
    telMobile VARCHAR(12)  NOT NULL,
    telFixe VARCHAR(12) ,
-   adresse VARCHAR(50)  NOT NULL,
+   adressePostale VARCHAR(50)  NOT NULL,
    province VARCHAR(50) ,
    complementAdresse VARCHAR(50) ,
    IdVille INT NOT NULL
@@ -216,8 +216,6 @@ CREATE TABLE ProgressionsCommande(
    dateEtatCommande DATE NOT NULL
 )ENGINE=InnoDB;
 
-
-/* les Contraintes de clef etrangere <3 pour vous les Disciples de Martine */
 
 ALTER TABLE Villes 
 ADD CONSTRAINT FK_Villes_Pays FOREIGN KEY(IdPays) REFERENCES Pays(IdPays);
