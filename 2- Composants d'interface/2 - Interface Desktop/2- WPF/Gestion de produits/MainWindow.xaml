@@ -39,7 +39,7 @@
             <Button Content="Vider" Grid.Column="8" Grid.Row="0" Background="{DynamicResource BackgroundButton}"/>
         </Grid>
 
-        <DataGrid x:Name="dataProduit" Grid.Column="1" Grid.Row="2" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False" >
+        <DataGrid x:Name="dataProduit" Grid.Column="1" Grid.Row="2" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False" CanUserAddRows="False" >
             <DataGrid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF151515" Offset="0"/>
