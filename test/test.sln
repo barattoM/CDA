@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test", "test\test.csproj", "{52A5FD5D-C317-4770-A671-9558613D14E2}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "testWizard", "testWizard\testWizard.vdproj", "{C19CD165-1752-40BB-BAC0-CE5C1EB3BB7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52A5FD5D-C317-4770-A671-9558613D14E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A5FD5D-C317-4770-A671-9558613D14E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A5FD5D-C317-4770-A671-9558613D14E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A5FD5D-C317-4770-A671-9558613D14E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C19CD165-1752-40BB-BAC0-CE5C1EB3BB7C}.Debug|Any CPU.ActiveCfg = Debug
+		{C19CD165-1752-40BB-BAC0-CE5C1EB3BB7C}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77401238-CF6D-40A6-9685-6FAF51E1D7E4}
+	EndGlobalSection
+EndGlobal

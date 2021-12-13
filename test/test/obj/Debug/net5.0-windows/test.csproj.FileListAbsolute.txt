@@ -1,0 +1,11 @@
+C:\Users\User\Documents\test\test\obj\Debug\net5.0-windows\test.csproj.AssemblyReference.cache
+C:\Users\User\Documents\test\test\obj\Debug\net5.0-windows\AdminWindow.baml
+C:\Users\User\Documents\test\test\obj\Debug\net5.0-windows\LoginWindow.baml
+C:\Users\User\Documents\test\test\obj\Debug\net5.0-windows\SecretWindow.baml
+C:\Users\User\Documents\test\test\obj\Debug\net5.0-windows\AdminWindow.g.cs
+C:\Users\User\Documents\test\test\obj\Debug\net5.0-windows\LoginWindow.g.cs
+C:\Users\User\Documents\test\test\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\User\Documents\test\test\obj\Debug\net5.0-windows\SecretWindow.g.cs
+C:\Users\User\Documents\test\test\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\User\Documents\test\test\obj\Debug\net5.0-windows\test_MarkupCompile.cache
+C:\Users\User\Documents\test\test\obj\Debug\net5.0-windows\test_MarkupCompile.lref
