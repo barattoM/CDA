@@ -53,7 +53,7 @@ namespace test {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/test;component/secretwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/test;V1.0.0.0;component/secretwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\SecretWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
