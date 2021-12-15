@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using GestionStocks.Data;
 using GestionStocks.Data.Dtos;
 using GestionStocks.Data.Models;
+using GestionStocks.Data.Profiles;
 using GestionStocks.Data.Services;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -20,30 +22,62 @@ namespace GestionStocks.Controllers
         private readonly CategoriesServices _service;
         private readonly IMapper _mapper;
 
-        public CategoriesController(CategoriesServices service, IMapper mapper)
+        public CategoriesController(MyDbContext _context)
         {
-            _service = service;
-            _mapper = mapper;
+            _service = new CategoriesServices(_context);
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CategoriesProfiles>();
+            });
+            _mapper = config.CreateMapper();
         }
 
         //GET api/Categories
         [HttpGet]
-        public ActionResult<IEnumerable<CategoriesDTO>> GetAllCategories()
+        public IEnumerable<CategoriesDTO> GetAllCategories()
         {
             IEnumerable<Categorie> listeCategories = _service.GetAllCategories();
-            return Ok(_mapper.Map<IEnumerable<CategoriesDTO>>(listeCategories));
+            return _mapper.Map<IEnumerable<CategoriesDTO>>(listeCategories);
+        }
+
+        public IEnumerable<Categorie> GetAllCategoriesModel()
+        {
+            IEnumerable<Categorie> listeCategories = _service.GetAllCategories();
+            return listeCategories;
+        }
+
+        [HttpGet]
+        public IEnumerable<string> GetAllCategoriesName()
+        {
+            IEnumerable<Categorie> listeCategories = _service.GetAllCategories();
+            var liste = new List<string>();
+            foreach (var categorie in listeCategories)
+            {
+                liste.Add(categorie.LibelleCategorie);
+            }
+            return liste;
         }
 
         //GET api/Categories/{i}
         [HttpGet("{id}", Name = "GetCategorieById")]
-        public ActionResult<CategoriesDTO> GetCategorieById(int id)
+        public CategoriesDTO GetCategorieById(int id)
         {
             Categorie commandItem = _service.GetCategorieById(id);
             if (commandItem != null)
             {
-                return Ok(_mapper.Map<CategoriesDTO>(commandItem));
+                return _mapper.Map<CategoriesDTO>(commandItem);
             }
-            return NotFound();
+            return null;
+        }
+
+        public Categorie GetCategorieByLibelle(string name)
+        {
+            Categorie commandItem = _service.GetCategorieByLibelle(name);
+            if (commandItem != null)
+            {
+                return commandItem;
+            }
+            return null;
         }
 
         //POST api/Categories

@@ -1,0 +1,8 @@
+{
+    "Server" :"localhost",
+    "Database" : "gestionstocks",
+    "SSL" : "none",
+    "User" : "root",
+    "Port" : "3306",
+    "Password" : ""
+}

@@ -6,8 +6,11 @@ using GestionStocks.Data.Models;
 using GestionStocks.Data.Profiles;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -26,14 +29,53 @@ namespace GestionStocks
     /// </summary>
     public partial class MainWindow : Window
     {
+        MyDbContext _context;
+        ArticlesController _articlesController;
         public MainWindow()
         {
             InitializeComponent();
-            MyDbContext _context = new MyDbContext();
-            var mapper= new Mapper();
-            ArticlesController _articlesController = new ArticlesController(_context,mapper);
-            ListeArticles.ItemsSource = _articlesController.GetAllArticles();
+            //_context = new MyDbContext();
+
+            InitContext();
+            
+            _articlesController = new ArticlesController(_context);
+            ListeArticles.ItemsSource = _articlesController.GetAllArticlesAvecLibelleCateg();
+
         }
 
+        private void InitContext()
+        {
+            var test=JsonSerializer.Deserialize<DatabaseConnection>(File.ReadAllText("../../../connexionJson.json"));
+            _context = new MyDbContext(test);
+        }
+
+        private void btnActions_Click(object sender, RoutedEventArgs e)
+        {
+            ArticlesDTOAvecLibelleCategorie article = (ArticlesDTOAvecLibelleCategorie)ListeArticles.SelectedItem;
+            string nom = (string)((Button)sender).Content;
+            if (article == null && (nom == "Modifier" || nom == "Supprimer"))
+            {
+                MessageBox.Show("Pas de sélection");
+            }
+            else
+            {
+                
+                FormulaireArticle actions = new FormulaireArticle(sender, this, article,_context);
+                this.Opacity = 0.7;
+                actions.ShowDialog();
+                this.Opacity = 1;
+            }
+        }
+
+        public void AjouterArticle(ArticlesDTOIn article)
+        {
+            _articlesController.CreateArticle(article);
+            ActualiserTableau();
+        }
+
+        private void ActualiserTableau()
+        {
+            ListeArticles.Items.Refresh();
+        }
     }
 }

@@ -2,6 +2,7 @@
 using GestionStocks.Data;
 using GestionStocks.Data.Dtos;
 using GestionStocks.Data.Models;
+using GestionStocks.Data.Profiles;
 using GestionStocks.Data.Services;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -21,16 +22,15 @@ namespace GestionStocks.Controllers
         private readonly ArticlesServices _service;
         private readonly IMapper _mapper;
 
-        public ArticlesController(ArticlesServices service, IMapper mapper)
-        {
-            _service = service;
-            _mapper = mapper;
-        }
-
-        public ArticlesController(MyDbContext _context, IMapper mapper)
+        public ArticlesController(MyDbContext _context)
         {
             _service = new ArticlesServices(_context);
-            _mapper = mapper;
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<ArticlesProfiles>();
+                cfg.AddProfile<CategoriesProfiles>();
+            });
+            _mapper = config.CreateMapper();
         }
 
 
@@ -40,6 +40,13 @@ namespace GestionStocks.Controllers
         {
             IEnumerable<Article> listeArticles = _service.GetAllArticles();
             return _mapper.Map<IEnumerable<ArticlesDTO>>(listeArticles);
+        }
+
+        [HttpGet]
+        public IEnumerable<ArticlesDTOAvecLibelleCategorie> GetAllArticlesAvecLibelleCateg()
+        {
+            IEnumerable<Article> listeArticles = _service.GetAllArticles();
+            return _mapper.Map<IEnumerable<ArticlesDTOAvecLibelleCategorie>>(listeArticles);
         }
 
         //GET api/Articles/{i}
@@ -52,6 +59,12 @@ namespace GestionStocks.Controllers
                 return Ok(_mapper.Map<ArticlesDTO>(commandItem));
             }
             return NotFound();
+        }
+
+        public Article GetArticleByLibelle(string libelle)
+        {
+            Article article = _service.GetArticleByLibelle(libelle);
+            return article;
         }
 
         //POST api/Articles

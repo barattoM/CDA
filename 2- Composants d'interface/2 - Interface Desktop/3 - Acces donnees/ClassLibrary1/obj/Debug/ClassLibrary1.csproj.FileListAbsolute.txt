@@ -1,0 +1,15 @@
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\bin\Debug\System.Diagnostics.EventLog.dll
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\bin\Debug\System.Diagnostics.PerformanceCounter.dll
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\bin\Debug\System.Diagnostics.EventLog.xml
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\bin\Debug\System.Diagnostics.PerformanceCounter.xml
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.AssemblyReference.cache
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CopyComplete
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\User\Documents\DWWM\CDA_Marvine\2- Composants d'interface\2 - Interface Desktop\3 - Acces donnees\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

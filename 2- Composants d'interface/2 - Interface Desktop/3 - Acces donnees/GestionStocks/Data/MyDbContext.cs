@@ -9,8 +9,15 @@ namespace GestionStocks.Data
 {
     public partial class MyDbContext : DbContext
     {
+        string ConnexionString;
         public MyDbContext()
         {
+
+        }
+
+        public MyDbContext(DatabaseConnection databaseConnection)
+        {
+            ConnexionString = "server = " + databaseConnection.Server + "; user = "+databaseConnection.User+"; database = "+databaseConnection.Database+"; port = "+databaseConnection.Port+"; ssl mode = "+databaseConnection.Ssl;
         }
 
         public MyDbContext(DbContextOptions<MyDbContext> options)
@@ -26,7 +33,8 @@ namespace GestionStocks.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySQL("server=localhost; user=root;database=gestionStocks; port=3306; ssl mode=none");
+                optionsBuilder.UseMySQL(this.ConnexionString);
+                //optionsBuilder.UseMySQL("server = localhost; user = root; database = gestionStocks; port = 3306; ssl mode = none");
             }
         }
 
@@ -51,7 +59,7 @@ namespace GestionStocks.Data
 
                 entity.Property(e => e.QuantiteStockee).HasColumnType("int(11)");
 
-                entity.HasOne(d => d.IdCategorieNavigation)
+                entity.HasOne(d => d.Categorie)
                     .WithMany(p => p.Articles)
                     .HasForeignKey(d => d.IdCategorie)
                     .OnDelete(DeleteBehavior.ClientSetNull)
