@@ -1,0 +1,53 @@
+/****  GENERAL ****/
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+div, a, header, footer, nav, article, section, body{
+    display: flex;
+    flex: 1;
+}
+
+img, video {
+    width: 100%;
+}
+
+.colonne {
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-image: url("./image/fond.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page{
+    width: 80%;
+}
+
+.entete{
+    background-image: url("./image/header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo{
+    flex:0.2;
+}
+
+nav{
+    background-image: url("./image/fond1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
