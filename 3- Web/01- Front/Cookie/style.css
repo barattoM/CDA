@@ -1,11 +1,19 @@
 /****  GENERAL ****/
 
+:root{
+    --bouton: linear-gradient(blue, aqua);
+    --boutonHover: linear-gradient(rgb(6, 6, 168), rgb(6, 126, 126));
+    --colorBouton:rgb(233, 233, 233);
+    --degradeTitre: linear-gradient(rgb(6, 6, 128), rgb(5, 21, 238));
+}
+
 html, body {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
-div, a, header, footer, nav, article, section, body{
+div, a, header, footer, nav, article, section, body, aside{
     display: flex;
     flex: 1;
 }
@@ -30,9 +38,43 @@ body{
     background-size: cover;
 }
 
-.page{
+a{
+    text-decoration: none;
+}
+
+.petitFlex{
+    flex:0.2;
+}
+
+.demi{
+    flex:0.5;
+}
+
+.double{
+    flex:2;
+}
+
+.triple{
+    flex:3;
+}
+
+.colorWhite{
+    color:var(--colorBouton);
+}
+
+.espaceH{
+    height: 3vh;
+}
+
+.width80{
     width: 80%;
 }
+
+.textJustify{
+    text-align: justify;
+}
+
+/******************************* Header **************************/
 
 .entete{
     background-image: url("./image/header.jpg");
@@ -41,13 +83,131 @@ body{
     background-size: cover;
 }
 
-.petitFlex{
-    flex:0.2;
-}
-
+/******************************* Nav **************************/
 nav{
     background-image: url("./image/fond1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: sticky;
+    top:0;
+}
+
+.navHamburger{
+    display:none;
+}
+
+.menu{
+    flex:none;
+    display: block;
+    border-radius: 0.3em;
+    border: 0.5px black solid;
+    background: var(--bouton);
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    padding: 0.2em;
+}
+
+.menu:hover{
+    background: var(--boutonHover);
+}
+
+
+/** Sous menu **/
+.sousMenu{
+    margin-top: 0.2em; /* s'accorde avec le padding du .menu*/
+    display:none;
+    position: absolute;
+    background: var(--bouton);
+    border-radius: 0.3em;
+    border: 0.5px black solid;
+}
+
+.menu:hover .sousMenu{
+    display:flex;
+}
+
+.choix:hover{
+    background: var(--boutonHover);
+}
+
+/******************************* Main **************************/
+/* main{
+    height: 200vh;
+} */
+
+.hautPage{
+    max-height: 35vh;
+}
+
+.actu{
+    background-color: white;
+    overflow-y: auto;
+}
+
+.fondDegrade{
+    background: var(--degradeTitre);
+}
+
+aside{
+    border: blue 1px solid;
+    border-radius: 5px;
+}
+
+
+/******************************* Footer **************************/
+
+footer{
+    background-image: url("./image/fond1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/******************************* Media queries **************************/
+
+@media screen and (max-width:800px){
+    .colonnePhone{
+        flex-direction: column;
+    }
+
+    .invisiblePhone{
+        display: none;
+    }
+    .width80{
+        width: 95%;
+    }
+    body{
+        font-size: 1.5em;
+    }
+    .nav{
+        display: none;
+    }
+    .iconeHamburger{
+        background-image: url("./image/header.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 1.5em;
+        max-height: 1.5em;
+    }
+    .navHamburger{
+        display: flex;
+        background: none;
+    }
+    .menuHamburger{
+        display: none;
+    }
+    .iconeHamburger:hover + .menuHamburger, .menuHamburger:hover{
+        display: flex;
+        position: absolute;
+        margin-top: 1.5em;/* En rapport avec le max-height du .iconeHamburger*/
+    }
+    .menu:hover .sousMenu, .sousMenu:hover{
+        display:flex;
+        position: absolute;
+        min-width: max-content;
+        margin-left: 7.9em;
+        margin-top: -1.5em;/* En rapport avec le max-height du .iconeHamburger*/
+    }
 }
