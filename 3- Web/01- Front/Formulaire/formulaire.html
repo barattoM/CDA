@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Formulaire</title>
+</head>
+
+<body class="colonne">
+        <header>
+            
+        </header>
+        <nav>
+            
+        </nav>
+        
+        <main>
+            <section class="center">
+                <form action="">
+
+                    <label for="">Nom :</label>
+                    <input type="text" pattern="^[A-Za-z]{2,20}$" required>
+                    <div class="center"><i class="fas fa-times-circle red iconeErreur cacher "></i></div>
+
+                    <label for="">Prenom :</label>
+                    <input type="text" pattern="^[A-Za-z]{2,20}$" required>
+                    <div class="center"><i class="fas fa-times-circle red iconeErreur cacher"></i></div>
+
+                    <label for="">Téléphone :</label>
+                    <input type="text" pattern="^(?:(?:\+|00)33[\s.-]{0,3}(?:\(0\)[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})$" required>
+                    <div class="center"><i class="fas fa-times-circle red iconeErreur cacher"></i></div>
+
+                    <label for="">Date de naissance :</label>
+                    <input type="date">
+                    <div class="center"><i class="fas fa-times-circle red iconeErreur cacher"></i></div>
+
+                    <label for="">Genre :</label>
+                    <div>
+                        <input type="radio" name="genre" value="H" checked>
+                        <label for="">Homme</label>
+                        <input type="radio" name="genre" value="F">
+                        <label for="">Femme</label>
+                        <input type="radio" name="genre" value="A">
+                        <label for="">Machin</label>
+                    </div>
+                    <div class="center"><i class="fas fa-times-circle red iconeErreur cacher"></i></div>
+
+                    <label for="">Email :</label>
+                    <input type="text" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
+                    <div class="center"><i class="fas fa-times-circle red iconeErreur cacher"></i></div>
+
+                    <label for="">Mot de passe :</label>
+                    <input type="text" required>
+                    <div class="center"><i class="fas fa-times-circle red iconeErreur cacher"></i></div>
+
+                    <div></div>
+                    <fieldset class="">
+                        <legend>Caractères du mot de passe</legend>
+                        <div class="colonne">
+                            <div>
+                                <i class="fas fa-times-circle red"></i>
+                                <label for="">1 majuscule</label>
+                            </div>
+                            <div>
+                                <i class="fas fa-times-circle red"></i>
+                                <label for="">10 caractères</label>
+                            </div>
+                            <div>
+                                <i class="fas fa-times-circle red"></i>
+                                <label for="">1 caractère spécial</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div></div>
+
+                    <div></div>
+                    <input type="submit">
+                    <div></div>
+
+                </form>
+            </section>
+
+        </main>
+        <footer>
+            
+        </footer>
+        <script src="script.js"></script>
+</body>
+
+</html>

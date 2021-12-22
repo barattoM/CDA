@@ -1,0 +1,57 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+div, a, header, footer, nav, article, section, body, aside{
+    display: flex;
+    flex: 1;
+}
+
+img, video {
+    width: 100%;
+}
+
+.colonne {
+    flex-direction: column;
+}
+
+.demi{
+    flex:0.5;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.triple{
+    flex:3;
+}
+
+.border{
+    border: 1px black solid;
+}
+
+.menu{
+    background-color: skyblue;
+}
+
+.borderArrondi{
+    border: 1px black solid;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.sousMenus{
+    display: none;
+}
+
+.visible{
+    background: slateblue;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    display:block;
+    margin-left: 5%;
+}

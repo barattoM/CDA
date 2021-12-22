@@ -1,0 +1,40 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+div, a, header, footer, nav, article, section, body, aside{
+    display: flex;
+    flex: 1;
+}
+
+img, video {
+    width: 100%;
+}
+
+.colonne {
+    flex-direction: column;
+}
+
+.red{
+    color:red;
+}
+
+.cacher{
+    visibility: hidden;
+}
+
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.1fr;
+    grid-gap: 0.5em;
+    grid-auto-rows: minmax(1em, auto);
+}
