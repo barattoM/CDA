@@ -21,6 +21,10 @@ img, video {
     color:red;
 }
 
+.green{
+    color:green;
+}
+
 .cacher{
     visibility: hidden;
 }
@@ -38,3 +42,19 @@ form{
     grid-gap: 0.5em;
     grid-auto-rows: minmax(1em, auto);
 }
+
+.info{
+    position: absolute;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    padding: 0.2em;
+    margin-left: 1.5em;
+}
+
+#infoMDP{
+    position: absolute;
+    background-color: whitesmoke;
+    margin-left: 12em;
+    margin-top:5em;
+} 
