@@ -72,7 +72,10 @@
                     </div>
 
                     <label for="">Mot de passe :</label>
-                    <input id="mdp" type="password" name="password" pattern="(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*\W).{8,}" required>
+                    <div>
+                        <input id="mdp" type="password" name="password" pattern="(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*\W).{8,}" required>
+                        <i id="eye" class="fas fa-eye"></i>
+                    </div>
                     <div class="center"><i class="fas fa-times-circle red iconeErreur cacher"></i></div>
                     <div class="center">
                         <fieldset id="infoMDP" class="cacher">
@@ -114,7 +117,7 @@
 
                 </form>
             </section>
-
+            <div id="up" class="cacher"><i class="fas fa-arrow-circle-up fa-3x"></i></div>
         </main>
         <footer>
             

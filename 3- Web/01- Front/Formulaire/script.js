@@ -4,6 +4,9 @@ var infoMDP=document.getElementById("infoMDP");
 var listeInputs=document.querySelectorAll("input[type=text]");
 var valide = {} // contient false si l'input ne respecte pas la regex, true sinon
 var boutonValider=document.querySelector("input[type=submit]")
+var eye=document.getElementById("eye");
+
+var DDN=document.querySelector("input[type=date]")
 
 //Initialisation des regex du MDP
 var RegexMDP=mdp.pattern.split(')'); // On récupère toute les conditions du regex du mdp
@@ -45,18 +48,48 @@ mdp.addEventListener("focusout",function(e){
 mdp.addEventListener('input',checkMDP);
 valide["password"]=false; //ajout du password dans la liste des validations
 
+//Oeil qui affiche le mdp
+eye.addEventListener("mouseover",function(){
+    mdp.type="text";
+});
+eye.addEventListener("mouseout",function(){
+    mdp.type="password";
+});
+
+//date
+DDN.addEventListener("input",function(e){
+    var dateAuj=new Date();
+    var date=new Date(e.target.value);
+    if(dateAuj.getTime()<date.getTime()){
+        e.target.nextElementSibling.querySelector(".iconeErreur").setAttribute("class","fas fa-cannabis multicolor iconeErreur");
+        valide["DDN"] = false;
+    }else{
+        e.target.nextElementSibling.querySelector(".iconeErreur").setAttribute("class","fas fa-check-circle green iconeErreur");
+        valide["DDN"] = true;
+    }
+    checkForm();
+});
+valide["DDN"]=true;
+
 /**
  * Check la validé de l'input (text) et affiche l'icone d'erreur ou validation
  * @param {*} e 
  */
 function check(e){
     input = e.target;
-    icone=e.target.nextElementSibling.querySelector(".iconeErreur");
+
+    //récupération de l'icone erreur
+    if(input.type=="password"){//Le password à une architecture differente des autres input (ajout de l'oeil)
+        icone=e.target.parentNode.nextElementSibling.querySelector(".iconeErreur");
+    }else{
+        icone=e.target.nextElementSibling.querySelector(".iconeErreur");
+    }
+
     if (input.checkValidity()) {
-        icone.setAttribute("class","fas fa-check-circle green iconeErreur")
+        icone.setAttribute("class","fas fa-check-circle green iconeErreur") //icone correcte
         valide[input.name] = true;
     } else {
-        icone.setAttribute("class","fas fa-times-circle red iconeErreur")
+        icone.setAttribute("class","fas fa-times-circle red iconeErreur")//icone erreur
         valide[input.name] = false;
     }
     checkForm();
@@ -67,14 +100,14 @@ function check(e){
  */
 function checkForm(){
     boutonValider.disabled = false;
-    boutonValider.nextElementSibling.children[0].classList.remove("cacher")
+    boutonValider.nextElementSibling.children[0].classList.remove("cacher") // affiche le petit bonhomme
     // Object.values(valide) : transforme l'objet en tableau
     //.indexOf(false) : cherche la position de false dans le tableau
     // si Object.values(valide).indexOf(false) est different de -1, ca veut dire qu'il a trouvé un false dans le tableau
     // donc l'un des input ne respecte pas la regex
     if (Object.values(valide).indexOf(false) != -1) {
         boutonValider.disabled = true;
-        boutonValider.nextElementSibling.children[0].classList.add("cacher")
+        boutonValider.nextElementSibling.children[0].classList.add("cacher") // enlever le petit bonhomme
     }
 }
 
@@ -115,3 +148,21 @@ function checkMDP(e){
     }
     check(e);
 }
+
+
+
+
+//bouton up
+var up=document.getElementById("up");
+
+window.addEventListener("scroll",function(){
+    if(window.scrollY==0){
+        up.classList.add("cacher");
+    }else{
+        up.classList.remove("cacher");
+    }
+});
+
+up.addEventListener("click",function(){
+    window.scrollTo(0,0);
+});
