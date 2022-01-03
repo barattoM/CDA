@@ -4,11 +4,17 @@ var selection=0;
 var plateau=document.getElementsByClassName("plateau")[0];
 var cases=document.getElementsByClassName("case");
 var caseSelect;
+var deal=document.getElementById("deal")
+var hint=document.getElementById("hint")
 
 initPlateau();
 
+deal.addEventListener("click",addGrid);
+hint.addEventListener("click",conseil);
+
 /**
  * Initialise le plateau de jeu
+ * @returns void
  */
 function initPlateau(){
     for(let i=0;i<27;i++){
@@ -47,6 +53,7 @@ function selectCase(e){
 /**
  * retourne true si la case est selectionnable comme paire ou false sinon
  * @param {} Case 
+ * @returns bool
  */
 function checkSelection(Case){
     //case modulo 9 (en dessous ou au dessus) / case adjacente (suivante ou precedente)
@@ -85,6 +92,7 @@ function checkSelection(Case){
 /**
  * retourne true si la somme des cases selectionner est 10, false sinon
  * @param {*} Case 
+ * @returns bool
  */
 function checkTotal(Case){
     if(Case.innerHTML*1+caseSelect.innerHTML*1==10 || Case.innerHTML*1==caseSelect.innerHTML*1){
@@ -96,6 +104,7 @@ function checkTotal(Case){
 
 /**
  * Enleve les valeurs valider du plateau (visuel), met les valeurs du tabPlateau à jour ( "" )
+ * @returns void
  */
 function validation(Case){
     let positionCase=Case.getAttribute("position");
@@ -112,7 +121,41 @@ function validation(Case){
     caseSelect=null;
 }
 
-    // //Mise à jour du tabPlateauCompress
-    // do{
-    //     let index = tabPlateau
-    // }while()
+/**
+ * Met à jour le tabPlateauCompress et ajoute ce nouveau plateau à l'ancien
+ */
+function addGrid(){
+    //Mise à jour du tabPlateauCompress
+    tabPlateauCompress=tabPlateau.filter(nb => nb!=""); //On enleve les espaces pour le tableau plateau compressé
+    taille = tabPlateau.length;
+
+    //On regarde si la dernière ligne est complète ou non, si oui on ne fait rien sinon on finis la ligne avec des cases ""
+    test=tabPlateauCompress.length%9 // 0 à 8 (0 si la ligne et finis ,1 si 1 colonne; 2 si 2 colonne ...)
+    if(test!=0){
+        for(let i=0;i<9-test;i++){
+            tabPlateauCompress.push("");
+        }
+    }
+
+    //On concatène les 2 tableaux 
+    tabPlateau=tabPlateau.concat(tabPlateauCompress);
+    console.log(tabPlateau)
+    //On ajoute le nouveau tableau au visuel
+    for(let i=taille;i<tabPlateau.length;i++){
+        let caseGrille=document.createElement("div");
+        caseGrille.className="case center";
+        caseGrille.setAttribute("position",i);
+        caseGrille.innerHTML=tabPlateau[i];
+        caseGrille.addEventListener("click",selectCase);
+        plateau.appendChild(caseGrille);
+    }
+    
+}
+
+function conseil(){
+   //recherche vertical (basse car haute sera déja fait)
+
+   //recherche horizontal (droite car gauche sera déja fait)
+   
+}
+    
