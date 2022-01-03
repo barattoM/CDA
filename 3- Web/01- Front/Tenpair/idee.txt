@@ -1,0 +1,9 @@
+jeu sous forme de grid
+données dans un tableau en JS : contient un nombre random entre 1 et 9 ou " "
+fonction : 
+-init plateau : initialise le plateau de jeu (tableau)
+-select case : selectionne la case du plateau
+-check selection : vérifie si la 2e case peut être selectionné
+-check total : vérifie si la somme des 2 cases fait 10
+-validation : enleve les valeur du plateau (visuel et tableau JS)
+-add grid : ajoute une réplique compactée du plateau à la suite du plateau original

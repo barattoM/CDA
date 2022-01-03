@@ -1,0 +1,43 @@
+/****  GENERAL ****/
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+div, a, header, footer, nav, article, section {
+    display: flex;
+    flex: 1;
+}
+
+img, video {
+    width: 100%;
+}
+
+.colonne {
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.plateau{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    /*grid-gap: 0.5em;*/
+    grid-auto-rows: minmax(1em, auto);
+}
+
+.case{
+    border:1px black solid;
+}
+
+.case:hover{
+    background-color: aliceblue;
+}
+
+.select{
+    background-color: aliceblue;
+}
