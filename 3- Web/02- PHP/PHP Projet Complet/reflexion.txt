@@ -1,0 +1,44 @@
+Select universelle :
+Il doit prendre en compte tout les types de requêtes possible en SELECT:
+
+-Colonne : Tableau des champs désiré 
+    [nomColonne1,nomColonne2]=> "Select nomColonne1, nomColonne2 "
+
+-Table : string
+    nomTable => "FROM nomTable "  
+
+-Condition : tableau associatif
+    plusieurs cas :
+    [nomColonne => '1'] => "WHERE nomColonne = 1"
+    [nomColonne => ['1','3']] => "WHERE nomColonne in (1,3)"
+    [nomColonne => '%abcd%'] => "WHERE nomColonne like "abcd" "
+    [nomColonne => '1-5'] => "WHERE nomColonne BETWEEN 1 and 5 "
+    Si il y a plusieurs conditons alors :
+    [nomColonne1 => '1', nomColonne2 => '%abcd%' ] => "WHERE nomColonne1 = 1 AND nomColonne2 LIKE "abcd" "
+
+-Order By : String avec nom de la colonne et le type de trie (ASC/DESC)
+    "nomColonne1 , nomColonne2 DESC" => "Order By nomColonne1 , nomColonne2 DESC"
+
+-Limit : string
+    "1" => "LIMIT 1 "
+    "1,2"=> "LIMIT 1,2 "
+
+Chaque sous string de la requête sera créer à partir de fonction distincte, il y a aura donc 5 sous fonction et 1 fonction principale :
+5 sous fonction :
+    - elementsSelect()
+    - tableSelect()
+    - conditionSelect()
+    - orderBySelect()
+    - limitSelect()
+fonction principale :
+    select()
+
+select($nomColonnes, $table , $conditions=null , $orderBy=null , $limit=null , $api=false)
+
+Paramètre API : true ou false
+si c'est true alors on ne renvoie pas un objet mais un string (json)
+
+Exemple d'appel : 
+Services::select([nomColonne1,nomColonne2], nomTable , [nomColonne => '1'] , "nomColonne1 , nomColonne2 DESC","1",false);
+
+

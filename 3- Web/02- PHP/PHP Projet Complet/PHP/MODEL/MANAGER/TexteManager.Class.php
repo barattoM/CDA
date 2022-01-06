@@ -18,4 +18,17 @@ class TexteManager
 			return false;
 		}
 	}
+
+	public static function checkIfLangExist($codeLangue){
+        $db=DbConnect::getDb();
+        $q=$db->prepare("SHOW COLUMNS FROM texte LIKE :codeLangue");
+        $q->bindValue(":codeLangue", $codeLangue, PDO::PARAM_STR);
+        $q->execute();
+        $results = $q->fetch(PDO::FETCH_ASSOC);
+        if ($results != false) {
+            return true;
+        }
+        return false;
+}
+
 }

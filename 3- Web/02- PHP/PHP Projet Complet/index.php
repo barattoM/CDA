@@ -11,13 +11,13 @@ session_start(); // initialise la variable de Session
 
 /***************************GESTION DES LANGUES ******************/
 // on recupere la langue de l'URL
-if (isset($_GET['lang'])) {
+if (isset($_GET['lang']) && TexteManager::checkIfLangExist($_GET['lang'])) {
     // tester si la langue est gérée
     $_SESSION['lang'] = $_GET['lang'];
 }
 
 //on prend la langue de la session sinon FR par défaut
-$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'FR';
+$_SESSION['lang'] = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'FR';
 
 
 /* création d'un tableau de redirection, en fonction du page, on choisit la page à afficher */
