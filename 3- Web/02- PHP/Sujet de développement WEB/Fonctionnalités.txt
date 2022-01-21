@@ -1,0 +1,13 @@
+Planification d'une réunion
+Exécution d'une réunion
+Archivage des réunions
+Ordres du jour
+Gestion des taches de la réunion (distribution,regoupement des taches, rappel des taches, etat de progression)
+Gestion des comptes rendus (création, distribution, archivage)
+Etablissement de tableaux analytiques
+Prise de notes durant la réunion
+Actions à effectuer suite à la réunion
+Gestion de fichier lié à la réunion
+Répartition du temps entre les sujets de discussion
+Distribution de l'ordre du jour de la réunion et archivage
+Module de recherche
