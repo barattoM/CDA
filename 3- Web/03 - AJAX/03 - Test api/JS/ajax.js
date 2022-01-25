@@ -5,11 +5,14 @@ var inputs= document.querySelectorAll("input");
 
 // on définit une requete
 const req = new XMLHttpRequest();
-
+const req2 = new XMLHttpRequest();
 //on envoi la requête
 
 req.open('GET', 'https://api.nasa.gov/planetary/apod?api_key=wNRj67i7e4U5BfKIloj24kFEGMdZfict1kgs8XRd', true);
 req.send(null);
+
+// req2.open('GET', 'https://www.mmobomb.com/api1/games', true);
+// req2.send(null);
 
 
 //on vérifie les changements d'états de la requête
