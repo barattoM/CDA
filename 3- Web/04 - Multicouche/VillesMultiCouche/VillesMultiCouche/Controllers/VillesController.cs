@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ namespace VillesMultiCouche.Controllers
         }
 
         //GET api/Villes
+        [EnableCors("myPolicy")]
         [HttpGet]
         public ActionResult<IEnumerable<VilleDTO>> GetAllVilles()
         {
@@ -32,6 +34,7 @@ namespace VillesMultiCouche.Controllers
         }
 
         //GET api/Villes/{i}
+        [EnableCors("myPolicy")]
         [HttpGet("{id}", Name = "GetVillesById")]
         public ActionResult<VilleDTO> GetVillesById(int id)
         {
@@ -44,6 +47,7 @@ namespace VillesMultiCouche.Controllers
         }
 
         //POST api/Villes
+        [EnableCors("myPolicy")]
         [HttpPost]
         public ActionResult<VilleDTO> CreateVilles(Ville obj)
         {
@@ -52,6 +56,7 @@ namespace VillesMultiCouche.Controllers
         }
 
         //POST api/Villes/{id}
+        [EnableCors("myPolicy")]
         [HttpPut("{id}")]
         public ActionResult UpdateVilles(int id, VilleDTO obj)
         {
@@ -65,8 +70,9 @@ namespace VillesMultiCouche.Controllers
             return NoContent();
         }
 
-       
+
         //DELETE api/Villes/{id}
+        [EnableCors("myPolicy")]
         [HttpDelete("{id}")]
         public ActionResult DeleteVilles(int id)
         {

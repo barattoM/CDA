@@ -40,6 +40,21 @@ namespace VillesMultiCouche
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "VillesMultiCouche", Version = "v1" });
             });
+
+            //Ajout des CORS
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "myPolicy",
+                                    builder =>
+                                    {
+                                        builder.WithOrigins("*").WithMethods("GET"); ;
+                                    });
+                options.AddPolicy(name: "myPolicy2",
+                                    builder =>
+                                    {
+                                        builder.WithOrigins("http://cda/").WithHeaders("content-type").WithMethods("PUT,POST,DELETE,GET");
+                                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +70,10 @@ namespace VillesMultiCouche
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            //Utilisations des CORS par l'application
+            app.UseCors("myPolicy");
+            app.UseCors("myPolicy2");
 
             app.UseAuthorization();
 

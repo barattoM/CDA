@@ -1,10 +1,39 @@
 
 var contenu = document.querySelector(".contenu");
 const requ = new XMLHttpRequest();
-requ.open('POST', 'https://localhost:44398/api/Villes', true);
-requ.setRequestHeader("Content-Type", "application/json; charset=utf-8");
-requ.setRequestHeader("Accept","*/*");
+/**** GET */
+requ.open('GET', 'https://localhost:44398/api/Departements', true);
 requ.send();
+
+/**** GET by ID  */
+// requ.open('GET', 'https://localhost:44398/api/Departements/1', true);
+// requ.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+// requ.send();
+
+
+// /**** POST */
+// requ.open('POST', 'https://localhost:44398/api/Departements', true);
+// requ.setRequestHeader("Content-Type", "application/json");
+// var args={
+//     "idDepartement": 0,
+//     "libelle": "nouveau"
+//   }
+//   requ.send(JSON.stringify(args));
+
+//   /**** PUT */
+//   requ.open('PUT', 'https://localhost:44398/api/Departements/1', true);
+//   requ.setRequestHeader("Content-Type", "application/json");
+//   var args={
+//       "idDepartement": 1,
+//       "libelle": "test"
+//     }
+//     requ.send(JSON.stringify(args));
+
+
+// /**** Delete  */
+// requ.open('DELETE', 'https://localhost:44398/api/Departements/4', true);
+// requ.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+// requ.send();
 
 requ.onreadystatechange = function(event) {
     if (this.readyState === XMLHttpRequest.DONE) {

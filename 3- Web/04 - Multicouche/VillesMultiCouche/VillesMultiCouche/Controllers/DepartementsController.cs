@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using VillesMultiCouche.Data.Services;
 
 namespace VillesMultiCouche.Controllers
 {
+    [EnableCors("myPolicy2")]
     [Route("api/[Controller]")]
     [ApiController]
     public class DepartementsController:ControllerBase
@@ -24,6 +26,7 @@ namespace VillesMultiCouche.Controllers
         }
 
         //GET api/Departements
+        
         [HttpGet]
         public ActionResult<IEnumerable<DepartementDTO>> GetAllDepartements()
         {
@@ -32,6 +35,7 @@ namespace VillesMultiCouche.Controllers
         }
 
         //GET api/Departements/{i}
+        
         [HttpGet("{id}", Name = "GetDepartementById")]
         public ActionResult<DepartementDTO> GetDepartementById(int id)
         {
@@ -44,6 +48,7 @@ namespace VillesMultiCouche.Controllers
         }
 
         //POST api/Departements
+        
         [HttpPost]
         public ActionResult<DepartementDTO> CreateDepartement(Departement obj)
         {
@@ -52,6 +57,7 @@ namespace VillesMultiCouche.Controllers
         }
 
         //POST api/Departements/{id}
+        
         [HttpPut("{id}")]
         public ActionResult UpdateDepartement(int id, DepartementDTO obj)
         {
@@ -65,9 +71,10 @@ namespace VillesMultiCouche.Controllers
             return NoContent();
         }
 
-       
+
 
         //DELETE api/Departements/{id}
+        
         [HttpDelete("{id}")]
         public ActionResult DeleteDepartement(int id)
         {
