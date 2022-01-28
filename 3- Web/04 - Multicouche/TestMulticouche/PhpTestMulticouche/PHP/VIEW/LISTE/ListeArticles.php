@@ -48,3 +48,16 @@ echo'</div>'; //Grid
 echo'</div>'; //Div
 echo '<div class="flex-0-1"></div>';
 echo '</main>';
+?>
+
+<template id="boutton">
+	<div class="caseListe grid-columns-span-5">
+		<div></div>
+		<a href="index.php?page=Accueil">
+			<button>
+				<i class="fas fa-sign-out-alt fa-rotate-180"></i>
+			</button>
+		</a>
+		<div></div>
+	</div>	
+</template>
