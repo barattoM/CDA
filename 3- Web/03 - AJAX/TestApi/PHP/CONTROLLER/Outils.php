@@ -37,7 +37,9 @@ function crypte($mot)
 
 function texte($codeTexte)
 {
-	return TextesManager::findByCodes($_SESSION['lang'], $codeTexte);
+	$texte=TextesManager::findByCodes($_SESSION['lang'], $codeTexte);
+	if($texte==false)return $codeTexte;
+	return $texte;
 }
 
 function afficherPage($page)
