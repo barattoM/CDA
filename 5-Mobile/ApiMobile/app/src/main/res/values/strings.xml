@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ApiMobile</string>
+    <string name="no_online">Pas de réseau</string>
+    <string name="no_network">Pas de réponse réseau</string>
+</resources>
